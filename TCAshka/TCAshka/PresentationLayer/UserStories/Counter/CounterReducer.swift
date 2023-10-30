@@ -17,11 +17,13 @@ public struct CounterReducer: Reducer {
         switch action {
         case .decrementButtonTapped:
             state.count += 1
+            state.isButtonOff = state.count == 0 ? true : false
         case .incrementButtonTapped:
             state.count -= 1
+            state.isButtonOff = state.count == 0 ? true : false
         case .resetButtonTapped:
             state.count = 0
-            state.sequence = ""
+            state.isButtonOff = true
         }
         return .none
     }

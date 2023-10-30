@@ -14,15 +14,16 @@ public struct DoubleCounterView: View {
     
     // MARK: - Properties
     
+    /// The store powering the `ExplorerTutorialDetailed` feature
     public var store: StoreOf<DoubleCounterReducer>
     
     // MARK: - View
     
     public var body: some View {
-        WithViewStore(store, observe: { $0 }) { viewStore in
+        WithViewStore(store) { viewStore in
             VStack(spacing: 30) {
-                VStack {
-                    Text("Counter #1: \(viewStore.counter1.sequence)")
+                VStack(spacing: 8) {
+                    Text("Counter #1: \(viewStore.sequenceCounter1)")
                     CounterView(
                         store: store.scope(
                             state: \.counter1,
@@ -30,8 +31,8 @@ public struct DoubleCounterView: View {
                         )
                     )
                 }
-                VStack {
-                    Text("Counter #2: \(viewStore.counter2.sequence)")
+                VStack(spacing: 8) {
+                    Text("Counter #2: \(viewStore.sequenceCounter2)")
                     CounterView(
                         store: store.scope(
                             state: \.counter2,
@@ -46,8 +47,13 @@ public struct DoubleCounterView: View {
     }
 }
 
+// MARK: - Preview
+
 #Preview {
-    DoubleCounterView(store: Store(initialState: DoubleCounterState(), reducer: {
-        DoubleCounterReducer()
-    }))
+    DoubleCounterView(
+        store: Store(
+            initialState: DoubleCounterState(),
+            reducer: DoubleCounterReducer()
+        )
+    )
 }

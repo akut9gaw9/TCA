@@ -13,14 +13,22 @@ public struct DoubleCounterState: Equatable {
     
     // MARK: - Properties
     
+    /// Sum of numbers of two counters
+    public var sum: Int {
+        counter1.count + counter2.count
+    }
+    
+    /// A string displaying the sequence of numbers used in the `counter1`
+    public var sequenceCounter1 = ""
+    
+    /// A string displaying the sequence of numbers used in the `counter2`
+    public var sequenceCounter2 = ""
+    
+    // MARK: - Children
+    
     /// First instance `CounterState`
     public var counter1 = CounterState()
     
     /// Second instance `CounterState`
     public var counter2 = CounterState()
-    
-    /// Sum of numbers of two counters
-    public var sum: Int {
-        self.counter1.count + self.counter2.count
-    }
 }

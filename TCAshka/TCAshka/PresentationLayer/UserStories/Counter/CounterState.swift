@@ -14,12 +14,8 @@ public struct CounterState: Equatable {
     // MARK: - Properties
     
     /// Fibonacci sequence element index
-    public var count = 0 {
-        didSet {
-            sequence += " \(count)"
-        }
-    }
+    public var count = 0
     
-    /// A string that shows the sequence of numbers that were used
-    public var sequence = ""
+    /// Common computed variable to disable the `plus` and `reset` button's action
+    public var isButtonOff = true
 }

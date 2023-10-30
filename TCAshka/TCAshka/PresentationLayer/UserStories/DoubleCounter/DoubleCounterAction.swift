@@ -11,9 +11,11 @@ import Foundation
 
 public enum DoubleCounterAction: Equatable {
     
-    // MARK: - Cases
+    // MARK: - Children
     
+    /// Handling events using a child action `CounterAction`
     case counter1(CounterAction)
     
+    /// Handling events using a child action `CounterAction`
     case counter2(CounterAction)
 }

@@ -56,45 +56,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8577758B2AEC32D8009B8D4E /* State */ = {
-			isa = PBXGroup;
-			children = (
-				85F5B5402AEAAD57007779B7 /* FibonacciCounterState.swift */,
-			);
-			path = State;
-			sourceTree = "<group>";
-		};
-		8577758C2AEC32DE009B8D4E /* Action */ = {
-			isa = PBXGroup;
-			children = (
-				85F5B53E2AEAAD4E007779B7 /* FibonacciCounterAction.swift */,
-			);
-			path = Action;
-			sourceTree = "<group>";
-		};
-		8577758D2AEC32E1009B8D4E /* Reducer */ = {
-			isa = PBXGroup;
-			children = (
-				85F5B5332AEA9F3D007779B7 /* FibonacciCounterReducer.swift */,
-			);
-			path = Reducer;
-			sourceTree = "<group>";
-		};
-		8577758F2AEC32E8009B8D4E /* View */ = {
-			isa = PBXGroup;
-			children = (
-				85F5B51E2AEA9BEB007779B7 /* FibonacciCounterView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		857775902AEC36A9009B8D4E /* DoubleCounter */ = {
 			isa = PBXGroup;
 			children = (
-				857775A22AEC39BC009B8D4E /* View */,
-				857775A12AEC39B8009B8D4E /* Reducer */,
-				857775A02AEC39B4009B8D4E /* Action */,
-				8577759F2AEC39B1009B8D4E /* State */,
+				857775A32AEC39C6009B8D4E /* DoubleCounterView.swift */,
+				857775A62AEC39D4009B8D4E /* DoubleCounterReducer.swift */,
+				857775A82AEC39DB009B8D4E /* DoubleCounterAction.swift */,
+				857775AA2AEC39E2009B8D4E /* DoubleCounterState.swift */,
 			);
 			path = DoubleCounter;
 			sourceTree = "<group>";
@@ -102,76 +70,12 @@
 		857775912AEC36BF009B8D4E /* Counter */ = {
 			isa = PBXGroup;
 			children = (
-				857775952AEC371F009B8D4E /* View */,
-				857775942AEC371D009B8D4E /* Reducer */,
-				857775932AEC371A009B8D4E /* Action */,
-				857775922AEC3718009B8D4E /* State */,
-			);
-			path = Counter;
-			sourceTree = "<group>";
-		};
-		857775922AEC3718009B8D4E /* State */ = {
-			isa = PBXGroup;
-			children = (
+				857775962AEC3729009B8D4E /* CounterView.swift */,
+				857775992AEC376B009B8D4E /* CounterReducer.swift */,
+				8577759B2AEC37A5009B8D4E /* CounterAction.swift */,
 				8577759D2AEC37AA009B8D4E /* CounterState.swift */,
 			);
-			path = State;
-			sourceTree = "<group>";
-		};
-		857775932AEC371A009B8D4E /* Action */ = {
-			isa = PBXGroup;
-			children = (
-				8577759B2AEC37A5009B8D4E /* CounterAction.swift */,
-			);
-			path = Action;
-			sourceTree = "<group>";
-		};
-		857775942AEC371D009B8D4E /* Reducer */ = {
-			isa = PBXGroup;
-			children = (
-				857775992AEC376B009B8D4E /* CounterReducer.swift */,
-			);
-			path = Reducer;
-			sourceTree = "<group>";
-		};
-		857775952AEC371F009B8D4E /* View */ = {
-			isa = PBXGroup;
-			children = (
-				857775962AEC3729009B8D4E /* CounterView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		8577759F2AEC39B1009B8D4E /* State */ = {
-			isa = PBXGroup;
-			children = (
-				857775AA2AEC39E2009B8D4E /* DoubleCounterState.swift */,
-			);
-			path = State;
-			sourceTree = "<group>";
-		};
-		857775A02AEC39B4009B8D4E /* Action */ = {
-			isa = PBXGroup;
-			children = (
-				857775A82AEC39DB009B8D4E /* DoubleCounterAction.swift */,
-			);
-			path = Action;
-			sourceTree = "<group>";
-		};
-		857775A12AEC39B8009B8D4E /* Reducer */ = {
-			isa = PBXGroup;
-			children = (
-				857775A62AEC39D4009B8D4E /* DoubleCounterReducer.swift */,
-			);
-			path = Reducer;
-			sourceTree = "<group>";
-		};
-		857775A22AEC39BC009B8D4E /* View */ = {
-			isa = PBXGroup;
-			children = (
-				857775A32AEC39C6009B8D4E /* DoubleCounterView.swift */,
-			);
-			path = View;
+			path = Counter;
 			sourceTree = "<group>";
 		};
 		85F5B5102AEA9BEB007779B7 = {
@@ -238,18 +142,10 @@
 		85F5B5312AEA9CFD007779B7 /* FibonacciCounter */ = {
 			isa = PBXGroup;
 			children = (
-				85F5B5322AEA9DA0007779B7 /* FibonacciCounter */,
-			);
-			path = FibonacciCounter;
-			sourceTree = "<group>";
-		};
-		85F5B5322AEA9DA0007779B7 /* FibonacciCounter */ = {
-			isa = PBXGroup;
-			children = (
-				8577758F2AEC32E8009B8D4E /* View */,
-				8577758D2AEC32E1009B8D4E /* Reducer */,
-				8577758C2AEC32DE009B8D4E /* Action */,
-				8577758B2AEC32D8009B8D4E /* State */,
+				85F5B51E2AEA9BEB007779B7 /* FibonacciCounterView.swift */,
+				85F5B5332AEA9F3D007779B7 /* FibonacciCounterReducer.swift */,
+				85F5B53E2AEAAD4E007779B7 /* FibonacciCounterAction.swift */,
+				85F5B5402AEAAD57007779B7 /* FibonacciCounterState.swift */,
 			);
 			path = FibonacciCounter;
 			sourceTree = "<group>";
