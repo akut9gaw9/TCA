@@ -6,20 +6,21 @@
 //
 
 import SwiftUI
-import TCA
+import ComposableArchitecture
 
-// MARK: - CounterView
+// MARK: - FibonacciCounterView
 
-public struct CounterView: View {
+public struct FibonacciCounterView: View {
     
     // MARK: - Properties
     
-    public let store: StoreOf<CounterFeature>
+    /// The store powering the `ExplorerTutorialDetailed` feature
+    public let store: StoreOf<FibonacciCounterReducer>
     
     // MARK: - View
     
     public var body: some View {
-        WithViewStore(store) { viewStore in
+        WithViewStore(store, observe: {$0}) { viewStore in
             VStack(spacing: 30) {
                 Text("Номер числа в последовательности: \(viewStore.count)")
                 ZStack {
@@ -33,15 +34,15 @@ public struct CounterView: View {
                                 viewStore.send(.incrementButtonTapped)
                             } label: {
                                 Image(systemName: "minus")
-                                    .foregroundColor(.black)
-                            }.disabled(viewStore.state.count == 0)
+                                    .foregroundColor(viewStore.isButtonOff ? .gray : .black)
+                            }
+                            .disabled(viewStore.isButtonOff)
                             Spacer()
                         }
                         Rectangle()
                             .frame(width: 1, height: 18)
                             .foregroundColor(.gray)
                         Text("\(viewStore.number)")
-                            .font(.system(size: 17, design: .rounded))
                             .foregroundColor(.black)
                         Rectangle()
                             .frame(width: 1, height: 18)
@@ -53,21 +54,25 @@ public struct CounterView: View {
                                 viewStore.send(.decrementButtonTapped)
                             } label: {
                                 Image(systemName: "plus")
-                                    .foregroundColor(.black)
+                                    .foregroundColor(viewStore.isPlusButtonOff ? .gray : .black)
                             }
+                            .disabled(viewStore.isPlusButtonOff)
                             Spacer()
                         }
                     }
-                }.frame(maxWidth: 130, maxHeight: 33)
+                }
+                .frame(maxWidth: 130, maxHeight: 33)
                 Button("Reset") {
                     viewStore.send(.resetButtonTapped)
-                }.disabled(viewStore.state.number == 0)
+                }
+                .disabled(viewStore.isButtonOff)
             }
+            .font(.system(size: 17, design: .rounded))
         }
     }
 }
 
-#Preview {
-    CounterView(store: Store(initialState: CounterState(), reducer: CounterFeature()))
-}
+//#Preview {
+//    FibonacciCounterView(store: Store(initialState: FibonacciCounterState(), reducer: FibonacciCounterReducer()))
+//}
 

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import TCA
+import ComposableArchitecture
 @main
 
 // MARK: - Application
@@ -17,7 +17,12 @@ struct TCAshkaApp: App {
     
     public var body: some Scene {
         WindowGroup {
-            CounterView(store: StoreOf<CounterFeature>(initialState: CounterState(), reducer: CounterFeature()))
+            DoubleCounterView(store: Store(initialState: DoubleCounterState(), reducer: {
+                DoubleCounterReducer()
+            }))
+//            FibonacciCounterView(store: Store(initialState: FibonacciCounterState(), reducer: {
+//                FibonacciCounterReducer()
+//            }))
         }
     }
 }

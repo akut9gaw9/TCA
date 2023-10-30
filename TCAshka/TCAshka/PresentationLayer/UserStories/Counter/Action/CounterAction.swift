@@ -2,7 +2,7 @@
 //  CounterAction.swift
 //  TCAshka
 //
-//  Created by Stanislav on 26.10.2023.
+//  Created by Stanislav on 27.10.2023.
 //
 
 import Foundation
@@ -13,12 +13,12 @@ public enum CounterAction: Equatable {
     
     // MARK: - Cases
     
-    /// Subtracting the last two numbers of a sequence
+    /// Decreases `count` by one
     case decrementButtonTapped
     
-    /// Adding the last two numbers of a sequence
+    /// Increases `count` by one
     case incrementButtonTapped
     
-    /// Reset `count` and `number` to zero
+    /// Reset `count`to zero
     case resetButtonTapped
 }

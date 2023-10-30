@@ -7,28 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		85CFC9162AEAD74200977AC3 /* Fibonacci.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CFC9152AEAD74200977AC3 /* Fibonacci.swift */; };
+		857775972AEC3729009B8D4E /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857775962AEC3729009B8D4E /* CounterView.swift */; };
+		8577759A2AEC376B009B8D4E /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857775992AEC376B009B8D4E /* CounterReducer.swift */; };
+		8577759C2AEC37A5009B8D4E /* CounterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8577759B2AEC37A5009B8D4E /* CounterAction.swift */; };
+		8577759E2AEC37AA009B8D4E /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8577759D2AEC37AA009B8D4E /* CounterState.swift */; };
+		857775A42AEC39C6009B8D4E /* DoubleCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857775A32AEC39C6009B8D4E /* DoubleCounterView.swift */; };
+		857775A72AEC39D4009B8D4E /* DoubleCounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857775A62AEC39D4009B8D4E /* DoubleCounterReducer.swift */; };
+		857775A92AEC39DB009B8D4E /* DoubleCounterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857775A82AEC39DB009B8D4E /* DoubleCounterAction.swift */; };
+		857775AB2AEC39E2009B8D4E /* DoubleCounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857775AA2AEC39E2009B8D4E /* DoubleCounterState.swift */; };
 		85F5B51D2AEA9BEB007779B7 /* TCAshkaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5B51C2AEA9BEB007779B7 /* TCAshkaApp.swift */; };
-		85F5B51F2AEA9BEB007779B7 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5B51E2AEA9BEB007779B7 /* CounterView.swift */; };
+		85F5B51F2AEA9BEB007779B7 /* FibonacciCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5B51E2AEA9BEB007779B7 /* FibonacciCounterView.swift */; };
 		85F5B5212AEA9BEC007779B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85F5B5202AEA9BEC007779B7 /* Assets.xcassets */; };
 		85F5B5242AEA9BEC007779B7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85F5B5232AEA9BEC007779B7 /* Preview Assets.xcassets */; };
-		85F5B5342AEA9F3D007779B7 /* CounterReduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5B5332AEA9F3D007779B7 /* CounterReduce.swift */; };
-		85F5B53B2AEAACAD007779B7 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 85F5B53A2AEAACAD007779B7 /* Dependencies */; };
-		85F5B53D2AEAACAD007779B7 /* TCA in Frameworks */ = {isa = PBXBuildFile; productRef = 85F5B53C2AEAACAD007779B7 /* TCA */; };
-		85F5B53F2AEAAD4E007779B7 /* CounterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5B53E2AEAAD4E007779B7 /* CounterAction.swift */; };
-		85F5B5412AEAAD57007779B7 /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5B5402AEAAD57007779B7 /* CounterState.swift */; };
+		85F5B5342AEA9F3D007779B7 /* FibonacciCounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5B5332AEA9F3D007779B7 /* FibonacciCounterReducer.swift */; };
+		85F5B53F2AEAAD4E007779B7 /* FibonacciCounterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5B53E2AEAAD4E007779B7 /* FibonacciCounterAction.swift */; };
+		85F5B5412AEAAD57007779B7 /* FibonacciCounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5B5402AEAAD57007779B7 /* FibonacciCounterState.swift */; };
+		85FEC5302AEF9B7C00829E0C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 85FEC52F2AEF9B7C00829E0C /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		85CFC9152AEAD74200977AC3 /* Fibonacci.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fibonacci.swift; sourceTree = "<group>"; };
+		857775962AEC3729009B8D4E /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		857775992AEC376B009B8D4E /* CounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
+		8577759B2AEC37A5009B8D4E /* CounterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterAction.swift; sourceTree = "<group>"; };
+		8577759D2AEC37AA009B8D4E /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
+		857775A32AEC39C6009B8D4E /* DoubleCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCounterView.swift; sourceTree = "<group>"; };
+		857775A62AEC39D4009B8D4E /* DoubleCounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCounterReducer.swift; sourceTree = "<group>"; };
+		857775A82AEC39DB009B8D4E /* DoubleCounterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCounterAction.swift; sourceTree = "<group>"; };
+		857775AA2AEC39E2009B8D4E /* DoubleCounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCounterState.swift; sourceTree = "<group>"; };
 		85F5B5192AEA9BEB007779B7 /* TCAshka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCAshka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F5B51C2AEA9BEB007779B7 /* TCAshkaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAshkaApp.swift; sourceTree = "<group>"; };
-		85F5B51E2AEA9BEB007779B7 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		85F5B51E2AEA9BEB007779B7 /* FibonacciCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciCounterView.swift; sourceTree = "<group>"; };
 		85F5B5202AEA9BEC007779B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85F5B5232AEA9BEC007779B7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		85F5B5332AEA9F3D007779B7 /* CounterReduce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReduce.swift; sourceTree = "<group>"; };
-		85F5B53E2AEAAD4E007779B7 /* CounterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterAction.swift; sourceTree = "<group>"; };
-		85F5B5402AEAAD57007779B7 /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
+		85F5B5332AEA9F3D007779B7 /* FibonacciCounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciCounterReducer.swift; sourceTree = "<group>"; };
+		85F5B53E2AEAAD4E007779B7 /* FibonacciCounterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciCounterAction.swift; sourceTree = "<group>"; };
+		85F5B5402AEAAD57007779B7 /* FibonacciCounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciCounterState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,19 +49,129 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85F5B53B2AEAACAD007779B7 /* Dependencies in Frameworks */,
-				85F5B53D2AEAACAD007779B7 /* TCA in Frameworks */,
+				85FEC5302AEF9B7C00829E0C /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		85CFC9172AEAEA2C00977AC3 /* Extensions */ = {
+		8577758B2AEC32D8009B8D4E /* State */ = {
 			isa = PBXGroup;
 			children = (
+				85F5B5402AEAAD57007779B7 /* FibonacciCounterState.swift */,
 			);
-			path = Extensions;
+			path = State;
+			sourceTree = "<group>";
+		};
+		8577758C2AEC32DE009B8D4E /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				85F5B53E2AEAAD4E007779B7 /* FibonacciCounterAction.swift */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		8577758D2AEC32E1009B8D4E /* Reducer */ = {
+			isa = PBXGroup;
+			children = (
+				85F5B5332AEA9F3D007779B7 /* FibonacciCounterReducer.swift */,
+			);
+			path = Reducer;
+			sourceTree = "<group>";
+		};
+		8577758F2AEC32E8009B8D4E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				85F5B51E2AEA9BEB007779B7 /* FibonacciCounterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		857775902AEC36A9009B8D4E /* DoubleCounter */ = {
+			isa = PBXGroup;
+			children = (
+				857775A22AEC39BC009B8D4E /* View */,
+				857775A12AEC39B8009B8D4E /* Reducer */,
+				857775A02AEC39B4009B8D4E /* Action */,
+				8577759F2AEC39B1009B8D4E /* State */,
+			);
+			path = DoubleCounter;
+			sourceTree = "<group>";
+		};
+		857775912AEC36BF009B8D4E /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				857775952AEC371F009B8D4E /* View */,
+				857775942AEC371D009B8D4E /* Reducer */,
+				857775932AEC371A009B8D4E /* Action */,
+				857775922AEC3718009B8D4E /* State */,
+			);
+			path = Counter;
+			sourceTree = "<group>";
+		};
+		857775922AEC3718009B8D4E /* State */ = {
+			isa = PBXGroup;
+			children = (
+				8577759D2AEC37AA009B8D4E /* CounterState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		857775932AEC371A009B8D4E /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				8577759B2AEC37A5009B8D4E /* CounterAction.swift */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		857775942AEC371D009B8D4E /* Reducer */ = {
+			isa = PBXGroup;
+			children = (
+				857775992AEC376B009B8D4E /* CounterReducer.swift */,
+			);
+			path = Reducer;
+			sourceTree = "<group>";
+		};
+		857775952AEC371F009B8D4E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				857775962AEC3729009B8D4E /* CounterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8577759F2AEC39B1009B8D4E /* State */ = {
+			isa = PBXGroup;
+			children = (
+				857775AA2AEC39E2009B8D4E /* DoubleCounterState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		857775A02AEC39B4009B8D4E /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				857775A82AEC39DB009B8D4E /* DoubleCounterAction.swift */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		857775A12AEC39B8009B8D4E /* Reducer */ = {
+			isa = PBXGroup;
+			children = (
+				857775A62AEC39D4009B8D4E /* DoubleCounterReducer.swift */,
+			);
+			path = Reducer;
+			sourceTree = "<group>";
+		};
+		857775A22AEC39BC009B8D4E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				857775A32AEC39C6009B8D4E /* DoubleCounterView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		85F5B5102AEA9BEB007779B7 = {
@@ -72,9 +195,6 @@
 			children = (
 				85F5B52B2AEA9CC3007779B7 /* ApplicationLayer */,
 				85F5B52C2AEA9CCB007779B7 /* PresentationLayer */,
-				85F5B52D2AEA9CD5007779B7 /* BusinessLayer */,
-				85F5B52E2AEA9CDB007779B7 /* CoreLayer */,
-				85F5B52F2AEA9CDF007779B7 /* Model */,
 				85F5B5202AEA9BEC007779B7 /* Assets.xcassets */,
 				85F5B5222AEA9BEC007779B7 /* Preview Content */,
 			);
@@ -105,54 +225,33 @@
 			path = PresentationLayer;
 			sourceTree = "<group>";
 		};
-		85F5B52D2AEA9CD5007779B7 /* BusinessLayer */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BusinessLayer;
-			sourceTree = "<group>";
-		};
-		85F5B52E2AEA9CDB007779B7 /* CoreLayer */ = {
-			isa = PBXGroup;
-			children = (
-				85CFC9172AEAEA2C00977AC3 /* Extensions */,
-				85CFC9152AEAD74200977AC3 /* Fibonacci.swift */,
-			);
-			path = CoreLayer;
-			sourceTree = "<group>";
-		};
-		85F5B52F2AEA9CDF007779B7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		85F5B5302AEA9CF5007779B7 /* UserStories */ = {
 			isa = PBXGroup;
 			children = (
-				85F5B5312AEA9CFD007779B7 /* SequenceFibonacci */,
+				85F5B5312AEA9CFD007779B7 /* FibonacciCounter */,
+				857775912AEC36BF009B8D4E /* Counter */,
+				857775902AEC36A9009B8D4E /* DoubleCounter */,
 			);
 			path = UserStories;
 			sourceTree = "<group>";
 		};
-		85F5B5312AEA9CFD007779B7 /* SequenceFibonacci */ = {
+		85F5B5312AEA9CFD007779B7 /* FibonacciCounter */ = {
 			isa = PBXGroup;
 			children = (
-				85F5B5322AEA9DA0007779B7 /* Counter */,
+				85F5B5322AEA9DA0007779B7 /* FibonacciCounter */,
 			);
-			path = SequenceFibonacci;
+			path = FibonacciCounter;
 			sourceTree = "<group>";
 		};
-		85F5B5322AEA9DA0007779B7 /* Counter */ = {
+		85F5B5322AEA9DA0007779B7 /* FibonacciCounter */ = {
 			isa = PBXGroup;
 			children = (
-				85F5B51E2AEA9BEB007779B7 /* CounterView.swift */,
-				85F5B5332AEA9F3D007779B7 /* CounterReduce.swift */,
-				85F5B53E2AEAAD4E007779B7 /* CounterAction.swift */,
-				85F5B5402AEAAD57007779B7 /* CounterState.swift */,
+				8577758F2AEC32E8009B8D4E /* View */,
+				8577758D2AEC32E1009B8D4E /* Reducer */,
+				8577758C2AEC32DE009B8D4E /* Action */,
+				8577758B2AEC32D8009B8D4E /* State */,
 			);
-			path = Counter;
+			path = FibonacciCounter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,8 +271,7 @@
 			);
 			name = TCAshka;
 			packageProductDependencies = (
-				85F5B53A2AEAACAD007779B7 /* Dependencies */,
-				85F5B53C2AEAACAD007779B7 /* TCA */,
+				85FEC52F2AEF9B7C00829E0C /* ComposableArchitecture */,
 			);
 			productName = TCAshka;
 			productReference = 85F5B5192AEA9BEB007779B7 /* TCAshka.app */;
@@ -204,7 +302,7 @@
 			);
 			mainGroup = 85F5B5102AEA9BEB007779B7;
 			packageReferences = (
-				85F5B5392AEAACAD007779B7 /* XCRemoteSwiftPackageReference "TCA" */,
+				85FEC52E2AEF9B7C00829E0C /* XCRemoteSwiftPackageReference "TCA" */,
 			);
 			productRefGroup = 85F5B51A2AEA9BEB007779B7 /* Products */;
 			projectDirPath = "";
@@ -232,12 +330,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85F5B53F2AEAAD4E007779B7 /* CounterAction.swift in Sources */,
-				85F5B5412AEAAD57007779B7 /* CounterState.swift in Sources */,
-				85CFC9162AEAD74200977AC3 /* Fibonacci.swift in Sources */,
-				85F5B51F2AEA9BEB007779B7 /* CounterView.swift in Sources */,
+				8577759E2AEC37AA009B8D4E /* CounterState.swift in Sources */,
+				85F5B53F2AEAAD4E007779B7 /* FibonacciCounterAction.swift in Sources */,
+				857775A72AEC39D4009B8D4E /* DoubleCounterReducer.swift in Sources */,
+				85F5B5412AEAAD57007779B7 /* FibonacciCounterState.swift in Sources */,
+				85F5B51F2AEA9BEB007779B7 /* FibonacciCounterView.swift in Sources */,
 				85F5B51D2AEA9BEB007779B7 /* TCAshkaApp.swift in Sources */,
-				85F5B5342AEA9F3D007779B7 /* CounterReduce.swift in Sources */,
+				857775AB2AEC39E2009B8D4E /* DoubleCounterState.swift in Sources */,
+				8577759C2AEC37A5009B8D4E /* CounterAction.swift in Sources */,
+				85F5B5342AEA9F3D007779B7 /* FibonacciCounterReducer.swift in Sources */,
+				8577759A2AEC376B009B8D4E /* CounterReducer.swift in Sources */,
+				857775A92AEC39DB009B8D4E /* DoubleCounterAction.swift in Sources */,
+				857775A42AEC39C6009B8D4E /* DoubleCounterView.swift in Sources */,
+				857775972AEC3729009B8D4E /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,26 +552,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		85F5B5392AEAACAD007779B7 /* XCRemoteSwiftPackageReference "TCA" */ = {
+		85FEC52E2AEF9B7C00829E0C /* XCRemoteSwiftPackageReference "TCA" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/monession/TCA.git";
+			repositoryURL = "https://github.com/Incetro/TCA.git";
 			requirement = {
-				branch = master;
+				branch = main;
 				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		85F5B53A2AEAACAD007779B7 /* Dependencies */ = {
+		85FEC52F2AEF9B7C00829E0C /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 85F5B5392AEAACAD007779B7 /* XCRemoteSwiftPackageReference "TCA" */;
-			productName = Dependencies;
-		};
-		85F5B53C2AEAACAD007779B7 /* TCA */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 85F5B5392AEAACAD007779B7 /* XCRemoteSwiftPackageReference "TCA" */;
-			productName = TCA;
+			package = 85FEC52E2AEF9B7C00829E0C /* XCRemoteSwiftPackageReference "TCA" */;
+			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
