@@ -22,53 +22,52 @@ public struct CounterView: View {
     public var body: some View {
         WithViewStore(store) { viewStore in
             VStack(spacing: 30) {
-                ZStack(alignment: .center) {
-                    Rectangle()
-                        .clipShape(RoundedRectangle(cornerRadius: 25))
-                        .foregroundColor(.white)
+                HStack(spacing: 8) {
                     HStack(spacing: 8) {
-                        HStack(spacing: 8) {
-                            Spacer()
-                            Button {
-                                viewStore.send(.incrementButtonTapped)
-                            } label: {
-                                Image(systemName: "minus")
-                                    .foregroundColor(.black)
-                            }
-                            Spacer()
+                        Spacer()
+                        Button {
+                            viewStore.send(.incrementButtonTapped)
+                        } label: {
+                            Image(systemName: "minus")
+                                .foregroundColor(.textForeground)
                         }
-                        Rectangle()
-                            .frame(width: 1, height: 18)
-                            .foregroundColor(.gray)
-                        Text("\(viewStore.count)")
-                            .foregroundColor(.black)
-                        Rectangle()
-                            .frame(width: 1, height: 18)
-                            .foregroundColor(.gray)
-                            .cornerRadius(1)
-                        HStack(spacing: 8) {
-                            Spacer()
-                            Button {
-                                viewStore.send(.decrementButtonTapped)
-                            } label: {
-                                Image(systemName: "plus")
-                                    .foregroundColor(.black)
-                            }
-                            Spacer()
+                        Spacer()
+                    }
+                    Rectangle()
+                        .frame(width: 1, height: 18)
+                        .foregroundColor(.gray)
+                    Text("\(viewStore.count)")
+                        .foregroundColor(.textForeground)
+                    Rectangle()
+                        .frame(width: 1, height: 18)
+                        .foregroundColor(.gray)
+                        .cornerRadius(1)
+                    HStack(spacing: 8) {
+                        Spacer()
+                        Button {
+                            viewStore.send(.decrementButtonTapped)
+                        } label: {
+                            Image(systemName: "plus")
+                                .foregroundColor(.textForeground)
                         }
+                        Spacer()
                     }
                 }
+                .background(RoundedRectangle(cornerRadius: 25.0, style: .continuous)
+                    .foregroundColor(.fontStandart))
                 .frame(maxWidth: 130, maxHeight: 33)
-                Button("Reset") {
-                    viewStore.send(.resetButtonTapped)
-                }
-                .disabled(viewStore.isButtonOff)
-                .foregroundColor(.black)
+//                Button("Reset") {
+//                    viewStore.send(.resetButtonTapped)
+//                }
+//                .disabled(viewStore.isResetButtonDisabled)
+//                .foregroundColor(.fontStandart)
             }
             .font(.system(size: 17, design: .rounded))
         }
     }
 }
+
+// MARK: - Preview
 
 #Preview {
     CounterView(

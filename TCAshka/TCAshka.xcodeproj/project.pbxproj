@@ -15,6 +15,10 @@
 		857775A72AEC39D4009B8D4E /* DoubleCounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857775A62AEC39D4009B8D4E /* DoubleCounterReducer.swift */; };
 		857775A92AEC39DB009B8D4E /* DoubleCounterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857775A82AEC39DB009B8D4E /* DoubleCounterAction.swift */; };
 		857775AB2AEC39E2009B8D4E /* DoubleCounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857775AA2AEC39E2009B8D4E /* DoubleCounterState.swift */; };
+		858950F22AF171B100CCB771 /* CounterBindingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858950F12AF171B100CCB771 /* CounterBindingState.swift */; };
+		858950F42AF171BC00CCB771 /* CounterBindingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858950F32AF171BC00CCB771 /* CounterBindingAction.swift */; };
+		858950F72AF171CB00CCB771 /* CounterBindingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858950F62AF171CB00CCB771 /* CounterBindingReducer.swift */; };
+		858950FB2AF1721E00CCB771 /* CounterBindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858950FA2AF1721E00CCB771 /* CounterBindingView.swift */; };
 		85F5B51D2AEA9BEB007779B7 /* TCAshkaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5B51C2AEA9BEB007779B7 /* TCAshkaApp.swift */; };
 		85F5B51F2AEA9BEB007779B7 /* FibonacciCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5B51E2AEA9BEB007779B7 /* FibonacciCounterView.swift */; };
 		85F5B5212AEA9BEC007779B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85F5B5202AEA9BEC007779B7 /* Assets.xcassets */; };
@@ -34,6 +38,10 @@
 		857775A62AEC39D4009B8D4E /* DoubleCounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCounterReducer.swift; sourceTree = "<group>"; };
 		857775A82AEC39DB009B8D4E /* DoubleCounterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCounterAction.swift; sourceTree = "<group>"; };
 		857775AA2AEC39E2009B8D4E /* DoubleCounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCounterState.swift; sourceTree = "<group>"; };
+		858950F12AF171B100CCB771 /* CounterBindingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterBindingState.swift; sourceTree = "<group>"; };
+		858950F32AF171BC00CCB771 /* CounterBindingAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterBindingAction.swift; sourceTree = "<group>"; };
+		858950F62AF171CB00CCB771 /* CounterBindingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterBindingReducer.swift; sourceTree = "<group>"; };
+		858950FA2AF1721E00CCB771 /* CounterBindingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterBindingView.swift; sourceTree = "<group>"; };
 		85F5B5192AEA9BEB007779B7 /* TCAshka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCAshka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F5B51C2AEA9BEB007779B7 /* TCAshkaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAshkaApp.swift; sourceTree = "<group>"; };
 		85F5B51E2AEA9BEB007779B7 /* FibonacciCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciCounterView.swift; sourceTree = "<group>"; };
@@ -76,6 +84,17 @@
 				8577759D2AEC37AA009B8D4E /* CounterState.swift */,
 			);
 			path = Counter;
+			sourceTree = "<group>";
+		};
+		858950F02AF1717000CCB771 /* CounterBinding */ = {
+			isa = PBXGroup;
+			children = (
+				858950FA2AF1721E00CCB771 /* CounterBindingView.swift */,
+				858950F62AF171CB00CCB771 /* CounterBindingReducer.swift */,
+				858950F32AF171BC00CCB771 /* CounterBindingAction.swift */,
+				858950F12AF171B100CCB771 /* CounterBindingState.swift */,
+			);
+			path = CounterBinding;
 			sourceTree = "<group>";
 		};
 		85F5B5102AEA9BEB007779B7 = {
@@ -132,9 +151,10 @@
 		85F5B5302AEA9CF5007779B7 /* UserStories */ = {
 			isa = PBXGroup;
 			children = (
-				85F5B5312AEA9CFD007779B7 /* FibonacciCounter */,
 				857775912AEC36BF009B8D4E /* Counter */,
+				85F5B5312AEA9CFD007779B7 /* FibonacciCounter */,
 				857775902AEC36A9009B8D4E /* DoubleCounter */,
+				858950F02AF1717000CCB771 /* CounterBinding */,
 			);
 			path = UserStories;
 			sourceTree = "<group>";
@@ -230,14 +250,18 @@
 				85F5B53F2AEAAD4E007779B7 /* FibonacciCounterAction.swift in Sources */,
 				857775A72AEC39D4009B8D4E /* DoubleCounterReducer.swift in Sources */,
 				85F5B5412AEAAD57007779B7 /* FibonacciCounterState.swift in Sources */,
+				858950FB2AF1721E00CCB771 /* CounterBindingView.swift in Sources */,
 				85F5B51F2AEA9BEB007779B7 /* FibonacciCounterView.swift in Sources */,
 				85F5B51D2AEA9BEB007779B7 /* TCAshkaApp.swift in Sources */,
 				857775AB2AEC39E2009B8D4E /* DoubleCounterState.swift in Sources */,
+				858950F42AF171BC00CCB771 /* CounterBindingAction.swift in Sources */,
 				8577759C2AEC37A5009B8D4E /* CounterAction.swift in Sources */,
 				85F5B5342AEA9F3D007779B7 /* FibonacciCounterReducer.swift in Sources */,
 				8577759A2AEC376B009B8D4E /* CounterReducer.swift in Sources */,
+				858950F72AF171CB00CCB771 /* CounterBindingReducer.swift in Sources */,
 				857775A92AEC39DB009B8D4E /* DoubleCounterAction.swift in Sources */,
 				857775A42AEC39C6009B8D4E /* DoubleCounterView.swift in Sources */,
+				858950F22AF171B100CCB771 /* CounterBindingState.swift in Sources */,
 				857775972AEC3729009B8D4E /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

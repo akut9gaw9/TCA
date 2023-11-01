@@ -16,7 +16,7 @@ public struct FibonacciCounterReducer: Reducer {
     /// Calculates the Fibonacci number using the specified index
     /// - Parameter index: element index
     /// - Returns: number at the specified index
-    public func fibonacciNumCalculation(withIndex index: Int) -> Int {
+    private func fibonacciNumCalculation(withIndex index: Int) -> Int {
         switch index {
         case 0:
             return 0

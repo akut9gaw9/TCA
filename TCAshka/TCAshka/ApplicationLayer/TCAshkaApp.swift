@@ -17,10 +17,10 @@ struct TCAshkaApp: App {
     
     public var body: some Scene {
         WindowGroup {
-            FibonacciCounterView(
+            CounterBindingView(
                 store: Store(
-                    initialState: FibonacciCounterState(),
-                    reducer: FibonacciCounterReducer()
+                    initialState: CounterBindingState(),
+                    reducer: CounterBindingReducer()
                 )
             )
         }

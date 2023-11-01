@@ -35,6 +35,8 @@ public struct FibonacciCounterView: View {
     }
 }
 
+// MARK: - Preview
+
 #Preview {
     FibonacciCounterView(
         store: Store(
