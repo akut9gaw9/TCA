@@ -14,20 +14,31 @@ public struct CounterBindingState: Equatable {
     
     // MARK: - Properties
     
+    /// Describes the state of the counter
     public var counterDescription: String {
         return "Counter is \(counter == nil ? "off" : "on")"
     }
     
+    /// Variable storing colors from `PickableColor`
     public var colors = PickableColor.allCases
     
+    /// Selected color
     public var pickedColor = PickableColor.red
     
-    public var toggleEnabled = false
+    /// Activity or inactivity toggle
+    public var isToggleInactive = false
     
+    /// Slider value
     public var sliderValue = 0.0
     
-    public var text = ""
+    /// Max slider lenght
+    public var maxSliderLenght: Double {
+        Double(counter?.count ?? 1) == 0 ? Double(1) : Double(counter?.count ?? 1)
+    }
     
+    /// /// Variable to disable the slider
+    public var isSliderDisabled = false
+        
     // MARK: - Children
     
     /// Optional `CounterState` instance
@@ -35,6 +46,7 @@ public struct CounterBindingState: Equatable {
     
     // MARK: - PickableColor
     
+    /// An enumeration that contains colors
     public enum PickableColor: String, CaseIterable {
         
         // MARK: - Cases

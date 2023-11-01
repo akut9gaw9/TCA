@@ -56,7 +56,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "421CF45C-A668-44FF-8B5C-F71BE299F3B2"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TCAshka/PresentationLayer/UserStories/CounterBinding/CounterBindingReducer.swift"
@@ -157,6 +157,36 @@
                   endingLineNumber = "20"
                   offsetFromSymbolStart = "364">
                </Location>
+               <Location
+                  uuid = "421CF45C-A668-44FF-8B5C-F71BE299F3B2 - 35302fb823da98fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (inout TCAshka.CounterBindingState, TCAshka.CounterBindingAction) -&gt; ComposableArchitecture.Effect&lt;TCAshka.CounterBindingAction&gt; in TCAshka.CounterBindingReducer.body.getter : some"
+                  moduleName = "TCAshka"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stanislav/TCA/TCAshka/TCAshka/PresentationLayer/UserStories/CounterBinding/CounterBindingReducer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "421CF45C-A668-44FF-8B5C-F71BE299F3B2 - 35302fb823da98fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (inout TCAshka.CounterBindingState, TCAshka.CounterBindingAction) -&gt; ComposableArchitecture.Effect&lt;TCAshka.CounterBindingAction&gt; in TCAshka.CounterBindingReducer.body.getter : some"
+                  moduleName = "TCAshka"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stanislav/TCA/TCAshka/TCAshka/PresentationLayer/UserStories/CounterBinding/CounterBindingReducer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "312">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -170,8 +200,8 @@
             filePath = "TCAshka/PresentationLayer/UserStories/CounterBinding/CounterBindingReducer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>

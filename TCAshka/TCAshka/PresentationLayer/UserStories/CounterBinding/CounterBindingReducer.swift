@@ -17,28 +17,23 @@ public struct CounterBindingReducer: Reducer {
     public var body: some Reducer<CounterBindingState, CounterBindingAction> {
         Reduce { state, action in
             switch action {
-            case .setTextValue(let text):
-                state.text = text
             case .setToggleValue(let enable):
-                state.toggleEnabled = enable
+                state.isToggleInactive = enable
+                state.isSliderDisabled = enable
                 state.sliderValue = 0
                 state.counter = state.counter == nil ? CounterState(count: 13) : nil
             case .moveSlider(let value):
                 state.sliderValue = Double(Int(value))
-            case .resetControls:
-                state = CounterBindingState()
-            case .counter(.decrementButtonTapped):
-                print("Count: \(state.counter!.count)")
-                print("Int slider value: \(Int(state.sliderValue))")
-                state.sliderValue = Double(min(state.counter!.count, Int(state.sliderValue)))
-                print(state.sliderValue)
-            case .counter(.incrementButtonTapped):
-                print("Count: \(state.counter!.count)")
-                print("Int slider value: \(Int(state.sliderValue))")
-                state.sliderValue = Double(min(state.counter!.count, Int(state.sliderValue)))
-                print(state.sliderValue)
             case .setPickerValue(let value):
                 state.pickedColor = value
+            case .counter(.decrementButtonTapped), .counter(.incrementButtonTapped):
+                if state.counter?.count == 0 {
+                    state.isSliderDisabled = true
+                    state.counter?.isMinusButtonDisabled = true
+                } else {
+                    state.isSliderDisabled = false
+                    state.counter?.isMinusButtonDisabled = false
+                }
             default:
                 return .none
             }

@@ -16,6 +16,9 @@ public struct CounterState: Equatable {
     /// Fibonacci sequence element index
     public var count = 0
     
-    /// Common computed variable to disable the `reset` button's action
+    /// Variable to disable the `reset` button's action
     public var isResetButtonDisabled = true
+    
+    /// /// Variable to disable the `minus` button's action
+    public var isMinusButtonDisabled = false
 }

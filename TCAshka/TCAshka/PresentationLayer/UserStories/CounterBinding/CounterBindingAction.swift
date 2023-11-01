@@ -11,22 +11,20 @@ import Foundation
 
 public enum CounterBindingAction: Equatable {
     
-    // MARK: - Properties
-    
-    case resetControls
-    
     // MARK: - Binding
     
+    /// Case which sets the selected color
     case setPickerValue(CounterBindingState.PickableColor)
-    
-    case setTextValue(String)
-    
+        
+    /// The case that makes toggle active or inactive
     case setToggleValue(Bool)
         
+    /// A case that reacts to changes in the slider value
     case moveSlider(Double)
     
     // MARK: - Children
     
+    /// Handling events using a child action `CounterAction`
     case counter(CounterAction)
     
 }

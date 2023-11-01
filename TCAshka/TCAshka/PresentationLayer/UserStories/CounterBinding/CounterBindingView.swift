@@ -14,6 +14,7 @@ struct CounterBindingView: View {
     
     // MARK: - Properties
     
+    /// The store powering the `CounterBinding` feature
     public var store: StoreOf<CounterBindingReducer>
     
     // MARK: - View
@@ -33,17 +34,9 @@ struct CounterBindingView: View {
                         }
                     }
                     .pickerStyle(.segmented)
-                    .disabled(viewStore.toggleEnabled)
-                    
-                    TextField(
-                        "Enter your text",
-                        text: viewStore.binding(
-                            get: \.text,
-                            send: CounterBindingAction.setTextValue
-                        )
-                    )
+                    .disabled(viewStore.isToggleInactive)
                     Toggle(isOn: viewStore.binding(
-                        get: \.toggleEnabled,
+                        get: \.isToggleInactive,
                         send: CounterBindingAction.setToggleValue
                     ), label: {
                         Text("Disable other controls")
@@ -60,6 +53,7 @@ struct CounterBindingView: View {
                             Spacer()
                             CounterView(store: store)
                         }
+                        .buttonStyle(BorderlessButtonStyle())
                     } else: {
                         Text("\(viewStore.counterDescription)")
                     }
@@ -71,10 +65,10 @@ struct CounterBindingView: View {
                                 get: \.sliderValue,
                                 send: CounterBindingAction.moveSlider
                             ),
-                            in: 0...Double(viewStore.counter?.count ?? 1),
+                            in: 0...Double(viewStore.maxSliderLenght),
                             step: 1
                         )
-                        .disabled(viewStore.toggleEnabled)
+                        .disabled(viewStore.isSliderDisabled)
                     }
                 }
                 .accentColor(viewStore.pickedColor.color)
