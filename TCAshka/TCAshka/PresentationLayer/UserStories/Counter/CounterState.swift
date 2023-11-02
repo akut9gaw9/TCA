@@ -21,8 +21,4 @@ public struct CounterState: Equatable {
     
     /// Variable to disable the `minus` button's action
     public var isMinusButtonDisabled = false
-    
-    
-    
-    
 }
