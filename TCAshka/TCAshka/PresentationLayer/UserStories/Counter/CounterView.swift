@@ -21,12 +21,13 @@ public struct CounterView: View {
     
     public var body: some View {
         WithViewStore(store) { viewStore in
-            VStack(spacing: 30) {
+            VStack(spacing: 18) {
                 HStack(alignment: .center, spacing: 8) {
                     Button {
                         viewStore.send(.incrementButtonTapped)
                     } label: {
                         Image(systemName: "minus")
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
                             .foregroundColor(.textForeground)
                     }
                     .disabled(viewStore.isMinusButtonDisabled)
@@ -37,13 +38,24 @@ public struct CounterView: View {
                         viewStore.send(.decrementButtonTapped)
                     } label: {
                         Image(systemName: "plus")
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
                             .foregroundColor(.textForeground)
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
-                .background(RoundedRectangle(cornerRadius: 25.0, style: .continuous)
-                    .foregroundColor(.fontStandart))
+                .background(
+                    RoundedRectangle(
+                        cornerRadius: 25.0,
+                        style: .continuous
+                    )
+                .foregroundColor(.fontStandart))
                 .frame(maxWidth: 120, maxHeight: 33)
+                Button(action: {
+                    viewStore.send(.resetButtonTapped)
+                }, label: {
+                    Text("Reset")
+                        .foregroundColor(.fontStandart)
+                })
             }
             .font(.system(size: 17, design: .rounded))
         }

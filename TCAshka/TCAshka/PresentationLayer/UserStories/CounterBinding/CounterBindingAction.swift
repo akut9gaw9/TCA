@@ -20,11 +20,10 @@ public enum CounterBindingAction: Equatable {
     case setToggleValue(Bool)
         
     /// A case that reacts to changes in the slider value
-    case moveSlider(Double)
+    case setSliderValue(Double)
     
     // MARK: - Children
     
     /// Handling events using a child action `CounterAction`
     case counter(CounterAction)
-    
 }

@@ -10,7 +10,7 @@ import ComposableArchitecture
 
 // MARK: - CounterBindingView
 
-struct CounterBindingView: View {
+public struct CounterBindingView: View {
     
     // MARK: - Properties
     
@@ -19,7 +19,7 @@ struct CounterBindingView: View {
     
     // MARK: - View
     
-    var body: some View {
+    public var body: some View {
         WithViewStore(store) { viewStore in
             Form {
                 Section {
@@ -34,9 +34,9 @@ struct CounterBindingView: View {
                         }
                     }
                     .pickerStyle(.segmented)
-                    .disabled(viewStore.isToggleInactive)
+                    .disabled(viewStore.isToggleActive)
                     Toggle(isOn: viewStore.binding(
-                        get: \.isToggleInactive,
+                        get: \.isToggleActive,
                         send: CounterBindingAction.setToggleValue
                     ), label: {
                         Text("Disable other controls")
@@ -63,7 +63,7 @@ struct CounterBindingView: View {
                         Slider(
                             value: viewStore.binding(
                                 get: \.sliderValue,
-                                send: CounterBindingAction.moveSlider
+                                send: CounterBindingAction.setSliderValue
                             ),
                             in: 0...Double(viewStore.maxSliderLenght),
                             step: 1

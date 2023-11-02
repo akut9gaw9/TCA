@@ -12,38 +12,6 @@ import SwiftUI
 
 public struct CounterBindingState: Equatable {
     
-    // MARK: - Properties
-    
-    /// Describes the state of the counter
-    public var counterDescription: String {
-        return "Counter is \(counter == nil ? "off" : "on")"
-    }
-    
-    /// Variable storing colors from `PickableColor`
-    public var colors = PickableColor.allCases
-    
-    /// Selected color
-    public var pickedColor = PickableColor.red
-    
-    /// Activity or inactivity toggle
-    public var isToggleInactive = false
-    
-    /// Slider value
-    public var sliderValue = 0.0
-    
-    /// Max slider lenght
-    public var maxSliderLenght: Double {
-        Double(counter?.count ?? 1) == 0 ? Double(1) : Double(counter?.count ?? 1)
-    }
-    
-    /// /// Variable to disable the slider
-    public var isSliderDisabled = false
-        
-    // MARK: - Children
-    
-    /// Optional `CounterState` instance
-    public var counter: CounterState? = CounterState(count: 13)
-    
     // MARK: - PickableColor
     
     /// An enumeration that contains colors
@@ -73,5 +41,42 @@ public struct CounterBindingState: Equatable {
                 return .purple
             }
         }
+    }
+    
+    // MARK: - Properties
+    
+    /// Variable storing colors from `PickableColor`
+    public var colors = PickableColor.allCases
+    
+    /// Selected color
+    public var pickedColor = PickableColor.red
+    
+    /// Activity or inactivity toggle
+    public var isToggleActive = false
+    
+    /// Slider value
+    public var sliderValue = 0.0
+    
+    /// Max slider lenght
+    public var maxSliderLenght: Double {
+        Double(max(1, counter?.count ?? -1))
+    }
+    
+    /// Variable to disable the slider
+    public var isSliderDisabled = false
+        
+    // MARK: - Children
+    
+    /// Optional `CounterState` instance
+    public var counter: CounterState? = CounterState(count: 13)
+}
+
+// MARK: - Text
+
+extension CounterBindingState {
+    
+    /// Describes the state of the counter
+    public var counterDescription: String {
+        return "Counter is \(counter == nil ? "off" : "on")"
     }
 }

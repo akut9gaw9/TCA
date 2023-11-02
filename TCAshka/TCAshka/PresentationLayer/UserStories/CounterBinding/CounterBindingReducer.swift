@@ -18,24 +18,23 @@ public struct CounterBindingReducer: Reducer {
         Reduce { state, action in
             switch action {
             case .setToggleValue(let enable):
-                state.isToggleInactive = enable
+                state.isToggleActive = enable
                 state.isSliderDisabled = enable
                 state.sliderValue = 0
                 state.counter = state.counter == nil ? CounterState(count: 13) : nil
-            case .moveSlider(let value):
+            case .setSliderValue(let value):
                 state.sliderValue = Double(Int(value))
             case .setPickerValue(let value):
                 state.pickedColor = value
             case .counter(.decrementButtonTapped), .counter(.incrementButtonTapped):
-                if state.counter?.count == 0 {
-                    state.isSliderDisabled = true
-                    state.counter?.isMinusButtonDisabled = true
-                } else {
-                    state.isSliderDisabled = false
-                    state.counter?.isMinusButtonDisabled = false
-                }
-            default:
-                return .none
+                let isCounter = state.counter?.count == 0
+                state.isSliderDisabled = isCounter
+                state.counter?.isMinusButtonDisabled = isCounter
+                state.sliderValue = state.sliderValue > state.maxSliderLenght ? state.maxSliderLenght : state.sliderValue
+            case .counter(.resetButtonTapped):
+                state.counter?.isMinusButtonDisabled = true
+                state.counter?.isResetButtonDisabled = true
+                state.sliderValue = state.sliderValue > state.maxSliderLenght ? state.maxSliderLenght : state.sliderValue
             }
             return .none
         }
