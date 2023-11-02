@@ -19,10 +19,10 @@ public struct DoubleCounterState: Equatable {
     }
     
     /// A string displaying the sequence of numbers used in the `counter1`
-    public var sequenceCounter1 = ""
+    public var sequenceCounter1Text = ""
     
     /// A string displaying the sequence of numbers used in the `counter2`
-    public var sequenceCounter2 = ""
+    public var sequenceCounter2Text = ""
     
     // MARK: - Children
     

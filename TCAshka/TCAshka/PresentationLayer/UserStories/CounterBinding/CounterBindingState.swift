@@ -54,6 +54,11 @@ public struct CounterBindingState: Equatable {
     /// Activity or inactivity toggle
     public var isToggleActive = false
     
+    public var isCounterActive = false
+    
+    /// Activity or inactivity toggle counter
+    public var isToggleCounterActive = false
+    
     /// Slider value
     public var sliderValue = 0.0
     

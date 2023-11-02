@@ -18,6 +18,9 @@ public enum CounterBindingAction: Equatable {
         
     /// The case that makes toggle active or inactive
     case setToggleValue(Bool)
+    
+    /// The case that makes toggle counter active or inactive
+    case setToggleCounterValue(Bool)
         
     /// A case that reacts to changes in the slider value
     case setSliderValue(Double)

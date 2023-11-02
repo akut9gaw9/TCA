@@ -23,7 +23,7 @@ public struct DoubleCounterView: View {
         WithViewStore(store) { viewStore in
             VStack(spacing: 30) {
                 VStack(spacing: 8) {
-                    Text("Counter #1: \(viewStore.sequenceCounter1)")
+                    Text("Counter #1: \(viewStore.sequenceCounter1Text)")
                     CounterView(
                         store: store.scope(
                             state: \.counter1,
@@ -32,7 +32,7 @@ public struct DoubleCounterView: View {
                     )
                 }
                 VStack(spacing: 8) {
-                    Text("Counter #2: \(viewStore.sequenceCounter2)")
+                    Text("Counter #2: \(viewStore.sequenceCounter2Text)")
                     CounterView(
                         store: store.scope(
                             state: \.counter2,

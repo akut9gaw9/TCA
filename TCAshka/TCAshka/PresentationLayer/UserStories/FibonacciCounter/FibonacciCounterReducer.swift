@@ -18,12 +18,8 @@ public struct FibonacciCounterReducer: Reducer {
     /// - Returns: number at the specified index
     private func fibonacciNumCalculation(withIndex index: Int) -> Int {
         switch index {
-        case 0:
-            return 0
-        case 1:
-            return 1
-        case -1:
-            return -1
+        case 0, 1, -1:
+            return index
         case ..<0:
             return fibonacciNumCalculation(withIndex: index + 1) + fibonacciNumCalculation(withIndex: index + 2)
         default:

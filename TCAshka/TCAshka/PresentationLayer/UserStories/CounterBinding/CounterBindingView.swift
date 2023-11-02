@@ -33,6 +33,13 @@ public struct CounterBindingView: View {
                             Text($0.rawValue.capitalized).tag($0.color)
                         }
                     }
+                    .background(
+                        RoundedRectangle(
+                            cornerRadius: 5,
+                            style: .continuous
+                        )
+                        .foregroundColor(viewStore.pickedColor.color)
+                    )
                     .pickerStyle(.segmented)
                     .disabled(viewStore.isToggleActive)
                     Toggle(isOn: viewStore.binding(
@@ -41,7 +48,11 @@ public struct CounterBindingView: View {
                     ), label: {
                         Text("Disable other controls")
                     })
-                    .toggleStyle(SwitchToggleStyle(tint: viewStore.pickedColor.color))
+                    .toggleStyle(
+                        SwitchToggleStyle(
+                            tint: viewStore.pickedColor.color
+                        )
+                    )
                     IfLetStore(
                         store.scope(
                             state: \.counter,
@@ -70,6 +81,17 @@ public struct CounterBindingView: View {
                         )
                         .disabled(viewStore.isSliderDisabled)
                     }
+                    Toggle(isOn: viewStore.binding(
+                        get: \.isCounterActive,
+                        send: CounterBindingAction.setToggleCounterValue
+                    ), label: {
+                        Text("Disable counter")
+                    })
+                    .toggleStyle(
+                        SwitchToggleStyle(
+                            tint: viewStore.pickedColor.color
+                        )
+                    )
                 }
                 .accentColor(viewStore.pickedColor.color)
             }

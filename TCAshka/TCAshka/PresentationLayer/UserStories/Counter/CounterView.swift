@@ -27,28 +27,32 @@ public struct CounterView: View {
                         viewStore.send(.incrementButtonTapped)
                     } label: {
                         Image(systemName: "minus")
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .frame(
+                                maxWidth: .greatestFiniteMagnitude,
+                                maxHeight: .greatestFiniteMagnitude
+                            )
                             .foregroundColor(.textForeground)
                     }
                     .disabled(viewStore.isMinusButtonDisabled)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                     Text("\(viewStore.count)")
                         .foregroundColor(.textForeground)
                     Button {
                         viewStore.send(.decrementButtonTapped)
                     } label: {
                         Image(systemName: "plus")
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .frame(
+                                maxWidth: .greatestFiniteMagnitude,
+                                maxHeight: .greatestFiniteMagnitude
+                            )
                             .foregroundColor(.textForeground)
                     }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
                 .background(
                     RoundedRectangle(
                         cornerRadius: 25.0,
                         style: .continuous
                     )
-                .foregroundColor(.fontStandart))
+                    .foregroundColor(.fontStandart))
                 .frame(maxWidth: 120, maxHeight: 33)
                 Button(action: {
                     viewStore.send(.resetButtonTapped)
@@ -56,6 +60,7 @@ public struct CounterView: View {
                     Text("Reset")
                         .foregroundColor(.fontStandart)
                 })
+                .disabled(viewStore.isResetButtonDisabled)
             }
             .font(.system(size: 17, design: .rounded))
         }

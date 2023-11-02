@@ -23,13 +23,13 @@ public struct DoubleCounterReducer: Reducer {
         Reduce { state, action in
             switch action {
             case .counter1(.decrementButtonTapped), .counter1(.incrementButtonTapped):
-                state.sequenceCounter1 += " \(state.counter1.count)"
+                state.sequenceCounter1Text += " \(state.counter1.count)"
             case .counter2(.decrementButtonTapped), .counter2(.incrementButtonTapped):
-                state.sequenceCounter2 += " \(state.counter2.count)"
+                state.sequenceCounter2Text += " \(state.counter2.count)"
             case .counter1(.resetButtonTapped):
-                state.sequenceCounter1 = ""
+                state.sequenceCounter1Text = ""
             case .counter2(.resetButtonTapped):
-                state.sequenceCounter2 = ""
+                state.sequenceCounter2Text = ""
             }
             return .none
         }
