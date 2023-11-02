@@ -8,31 +8,31 @@
 import Foundation
 import ComposableArchitecture
 
-// MARK: - ModuleCounterReducer
+// MARK: - MainReducer
 
-public struct ModuleCounterReducer: Reducer {
+public struct MainReducer: Reducer {
     
     // MARK: - Reducer
     
-    public var body: some Reducer<ModuleCounterState, ModuleCounterAction> {
+    public var body: some Reducer<MainState, MainAction> {
         Scope(
             state: \.counter,
-            action: /ModuleCounterAction.counterAction) {
+            action: /MainAction.counterAction) {
                 CounterReducer()
             }
         Scope(
             state: \.fibonacciCounter,
-            action: /ModuleCounterAction.fibonacciCounterAction) {
+            action: /MainAction.fibonacciCounterAction) {
                 FibonacciCounterReducer()
             }
         Scope(
             state: \.doubleCounter,
-            action: /ModuleCounterAction.doubleCounterAction) {
+            action: /MainAction.doubleCounterAction) {
                 DoubleCounterReducer()
             }
         Scope(
             state: \.counterBinding,
-            action: /ModuleCounterAction.counterBinding) {
+            action: /MainAction.counterBinding) {
                 CounterBindingReducer()
             }
         Reduce { state, action in

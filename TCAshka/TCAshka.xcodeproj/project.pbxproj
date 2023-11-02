@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		850200572AF4258C00D3F91F /* ModuleCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850200562AF4258C00D3F91F /* ModuleCounterView.swift */; };
-		850200592AF4259400D3F91F /* ModuleCounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850200582AF4259400D3F91F /* ModuleCounterState.swift */; };
-		8502005B2AF4259B00D3F91F /* ModuleCounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8502005A2AF4259B00D3F91F /* ModuleCounterReducer.swift */; };
-		8502005D2AF425A800D3F91F /* ModuleCounterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8502005C2AF425A800D3F91F /* ModuleCounterAction.swift */; };
+		850200572AF4258C00D3F91F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850200562AF4258C00D3F91F /* MainView.swift */; };
+		850200592AF4259400D3F91F /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850200582AF4259400D3F91F /* MainState.swift */; };
+		8502005B2AF4259B00D3F91F /* MainReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8502005A2AF4259B00D3F91F /* MainReducer.swift */; };
+		8502005D2AF425A800D3F91F /* MainAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8502005C2AF425A800D3F91F /* MainAction.swift */; };
 		857775972AEC3729009B8D4E /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857775962AEC3729009B8D4E /* CounterView.swift */; };
 		8577759A2AEC376B009B8D4E /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857775992AEC376B009B8D4E /* CounterReducer.swift */; };
 		8577759C2AEC37A5009B8D4E /* CounterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8577759B2AEC37A5009B8D4E /* CounterAction.swift */; };
@@ -34,10 +34,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		850200562AF4258C00D3F91F /* ModuleCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleCounterView.swift; sourceTree = "<group>"; };
-		850200582AF4259400D3F91F /* ModuleCounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleCounterState.swift; sourceTree = "<group>"; };
-		8502005A2AF4259B00D3F91F /* ModuleCounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleCounterReducer.swift; sourceTree = "<group>"; };
-		8502005C2AF425A800D3F91F /* ModuleCounterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleCounterAction.swift; sourceTree = "<group>"; };
+		850200562AF4258C00D3F91F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		850200582AF4259400D3F91F /* MainState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
+		8502005A2AF4259B00D3F91F /* MainReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainReducer.swift; sourceTree = "<group>"; };
+		8502005C2AF425A800D3F91F /* MainAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAction.swift; sourceTree = "<group>"; };
 		857775962AEC3729009B8D4E /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		857775992AEC376B009B8D4E /* CounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
 		8577759B2AEC37A5009B8D4E /* CounterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterAction.swift; sourceTree = "<group>"; };
@@ -72,15 +72,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		850200552AF4250900D3F91F /* ModuleCounter */ = {
+		850200552AF4250900D3F91F /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				850200562AF4258C00D3F91F /* ModuleCounterView.swift */,
-				8502005A2AF4259B00D3F91F /* ModuleCounterReducer.swift */,
-				8502005C2AF425A800D3F91F /* ModuleCounterAction.swift */,
-				850200582AF4259400D3F91F /* ModuleCounterState.swift */,
+				850200562AF4258C00D3F91F /* MainView.swift */,
+				8502005A2AF4259B00D3F91F /* MainReducer.swift */,
+				8502005C2AF425A800D3F91F /* MainAction.swift */,
+				850200582AF4259400D3F91F /* MainState.swift */,
 			);
-			path = ModuleCounter;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		857775902AEC36A9009B8D4E /* DoubleCounter */ = {
@@ -170,7 +170,7 @@
 		85F5B5302AEA9CF5007779B7 /* UserStories */ = {
 			isa = PBXGroup;
 			children = (
-				850200552AF4250900D3F91F /* ModuleCounter */,
+				850200552AF4250900D3F91F /* Main */,
 				857775912AEC36BF009B8D4E /* Counter */,
 				85F5B5312AEA9CFD007779B7 /* FibonacciCounter */,
 				857775902AEC36A9009B8D4E /* DoubleCounter */,
@@ -267,20 +267,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				8577759E2AEC37AA009B8D4E /* CounterState.swift in Sources */,
-				850200572AF4258C00D3F91F /* ModuleCounterView.swift in Sources */,
+				850200572AF4258C00D3F91F /* MainView.swift in Sources */,
 				85F5B53F2AEAAD4E007779B7 /* FibonacciCounterAction.swift in Sources */,
 				857775A72AEC39D4009B8D4E /* DoubleCounterReducer.swift in Sources */,
 				85F5B5412AEAAD57007779B7 /* FibonacciCounterState.swift in Sources */,
 				858950FB2AF1721E00CCB771 /* CounterBindingView.swift in Sources */,
-				850200592AF4259400D3F91F /* ModuleCounterState.swift in Sources */,
-				8502005B2AF4259B00D3F91F /* ModuleCounterReducer.swift in Sources */,
+				850200592AF4259400D3F91F /* MainState.swift in Sources */,
+				8502005B2AF4259B00D3F91F /* MainReducer.swift in Sources */,
 				85F5B51F2AEA9BEB007779B7 /* FibonacciCounterView.swift in Sources */,
 				85F5B51D2AEA9BEB007779B7 /* TCAshkaApp.swift in Sources */,
 				857775AB2AEC39E2009B8D4E /* DoubleCounterState.swift in Sources */,
 				858950F42AF171BC00CCB771 /* CounterBindingAction.swift in Sources */,
 				8577759C2AEC37A5009B8D4E /* CounterAction.swift in Sources */,
 				85F5B5342AEA9F3D007779B7 /* FibonacciCounterReducer.swift in Sources */,
-				8502005D2AF425A800D3F91F /* ModuleCounterAction.swift in Sources */,
+				8502005D2AF425A800D3F91F /* MainAction.swift in Sources */,
 				8577759A2AEC376B009B8D4E /* CounterReducer.swift in Sources */,
 				858950F72AF171CB00CCB771 /* CounterBindingReducer.swift in Sources */,
 				857775A92AEC39DB009B8D4E /* DoubleCounterAction.swift in Sources */,
