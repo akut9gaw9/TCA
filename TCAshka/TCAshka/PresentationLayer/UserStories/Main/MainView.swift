@@ -23,12 +23,13 @@ public struct MainView: View {
             NavigationView {
                 List {
                     Section(header: Text("Counters")) {
-                        ForEach(viewStore.counters, id: \.self) { counter in
-                            Button(action: {
-                                viewStore.send(counter.action)
-                            }, label: {
-                                Text(counter.title)
-                            })
+                        ForEach(viewStore.counters, id: \.self) { counterType in
+                            Button {
+                                viewStore.send(.onItemTap(counterType))
+                            } label: {
+                                Text(counterType.title)
+                                    .foregroundColor(.listText)
+                            }
                         }
                     }
                 }
@@ -42,7 +43,7 @@ public struct MainView: View {
                             CounterView(
                                 store: store.scope(
                                     state: \.counter,
-                                    action: MainAction.counterAction
+                                    action: MainAction.counter
                                 )
                             )
                         },
@@ -61,7 +62,7 @@ public struct MainView: View {
                             FibonacciCounterView(
                                 store: store.scope(
                                     state: \.fibonacciCounter,
-                                    action: MainAction.fibonacciCounterAction
+                                    action: MainAction.fibonacciCounter
                                 )
                             )
                         },
@@ -80,7 +81,7 @@ public struct MainView: View {
                             DoubleCounterView(
                                 store: store.scope(
                                     state: \.doubleCounter,
-                                    action: MainAction.doubleCounterAction
+                                    action: MainAction.doubleCounter
                                 )
                             )
                         },

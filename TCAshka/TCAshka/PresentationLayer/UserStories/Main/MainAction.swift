@@ -11,16 +11,20 @@ import Foundation
 
 public enum MainAction: Equatable {
     
+    // MARK: - General
+    
+    case onItemTap(MainState.Counters)
+    
     // MARK: - Children
     
     /// Handling events using a child action `CounterAction`
-    case counterAction(CounterAction)
+    case counter(CounterAction)
     
     /// Handling events using a child action `FibonacciCounterAction`
-    case fibonacciCounterAction(FibonacciCounterAction)
+    case fibonacciCounter(FibonacciCounterAction)
     
     /// Handling events using a child action `DoubleCounterAction`
-    case doubleCounterAction(DoubleCounterAction)
+    case doubleCounter(DoubleCounterAction)
     
     /// Handling events using a child action `CounterBindingAction`
     case counterBinding(CounterBindingAction)

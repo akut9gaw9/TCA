@@ -15,6 +15,8 @@ public struct MainState: Equatable {
     
     /// An enumeration that contains counters
     public enum Counters: String, CaseIterable {
+        
+        // MARK: - Cases
         case counter
         case fibonacciCounter
         case doubleCounter
@@ -32,19 +34,6 @@ public struct MainState: Equatable {
                 "Double Counter"
             case .counterBinding:
                 "Counter Binding"
-            }
-        }
-        
-        public var action: MainAction {
-            switch self {
-            case .counter:
-                return .setCounterActive(true)
-            case .fibonacciCounter:
-                return .setFibonacciCounterActive(true)
-            case .doubleCounter:
-                return .setDoubleCounterActive(true)
-            case .counterBinding:
-                return .setCounterBindingActive(true)
             }
         }
     }
