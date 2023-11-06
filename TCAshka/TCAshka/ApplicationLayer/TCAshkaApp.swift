@@ -17,10 +17,10 @@ struct TCAshkaApp: App {
     
     public var body: some Scene {
         WindowGroup {
-            MainView(
+            InteractiveListView(
                 store: Store(
-                    initialState: MainState(),
-                    reducer: MainReducer()
+                    initialState: InteractiveListState(),
+                    reducer: InteractiveListReducer()
                 )
             )
         } 

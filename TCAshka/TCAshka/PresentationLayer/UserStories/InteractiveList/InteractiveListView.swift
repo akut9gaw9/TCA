@@ -23,32 +23,42 @@ public struct InteractiveListView: View {
         WithViewStore(store) { viewStore in
             NavigationView {
                 Form {
-                    Section {
-                        ForEachStore(
-                            store.scope(
-                                state: \.items,
-                                action: InteractiveListAction.item(id:action:)
-                            ),
-                            content: InteractiveListItemView.init
-                        )
-                        .onDelete { indexToDelete in
-                            viewStore.send(.delete(indexToDelete))
+                    let sections = viewStore.sections.keys.map{ $0 }.sorted()
+                    ForEach(sections, id: \.self) { key in
+                        Section {
+                            ForEachStore(
+                                store.scope(
+                                    state: { state in
+                                        IdentifiedArray(uniqueElements: state.sections[key] ?? [])
+                                    },
+                                    action: InteractiveListAction.item
+                                ),
+                                content: { store in
+                                    InteractiveListItemView(store: store)
+                                }
+                            )
+                            .onDelete { indexToDelete in
+                                viewStore.send(.delete(indexToDelete))
+                            }
+                            .buttonStyle(BorderlessButtonStyle())
+                            .textCase(nil)
+                        } header: {
+                            Text(key.description)
                         }
                     }
-                    .buttonStyle(BorderlessButtonStyle())
-                    .textCase(nil)
                 }
-                .navigationBarItems(trailing:
-                                        Button {
+            }
+            .toolbar(content: {
+                Button {
                     viewStore.send(.addRandom, animation: .default)
                 } label: {
                     Text("Add")
                 }
-                )
-                .navigationTitle("Basic list")
-                .onAppear {
-                    viewStore.send(.onAppear)
-                }
+                
+            })
+            .navigationTitle("Basic list")
+            .onAppear {
+                viewStore.send(.onAppear)
             }
         }
     }
@@ -65,7 +75,4 @@ public struct InteractiveListView: View {
             )
         )
     }
-    
-    
-    
 }

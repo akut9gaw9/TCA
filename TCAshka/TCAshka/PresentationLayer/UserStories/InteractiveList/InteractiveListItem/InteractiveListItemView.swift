@@ -21,7 +21,7 @@ public struct InteractiveListItemView: View {
     
     public var body: some View {
         WithViewStore(store) { viewStore in
-            HStack(spacing: 0) {
+            HStack(spacing: 5) {
                 Circle()
                     .fill(viewStore.color)
                     .frame(width: 29, height: 29)

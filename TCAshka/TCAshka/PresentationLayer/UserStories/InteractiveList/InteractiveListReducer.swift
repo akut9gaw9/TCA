@@ -22,34 +22,29 @@ public struct InteractiveListReducer: Reducer {
         Reduce { state, action in
             switch action {
             case .onAppear:
-                return .send(.updateItems)
-            case .updateItems:
-                let randomItems = randomListItems()
+                return .send(.creatingItems)
+            case .creatingItems:
+                let randomItems = InteractiveListItemState.randomListItems().sorted { $0.title < $1.title }
                 state.items = IdentifiedArray(uniqueElements: randomItems)
             case .addRandom:
-                let randomElement = createItem()
+                let randomElement = InteractiveListItemState.createItem()
                 state.items.insert(randomElement, at: 0)
+                state.items.sorted { $0.title < $1.title }
             case .removeCheckedItems:
                 state.items.removeAll(where: \.isChecked)
             case .delete(let offset):
                 state.items.remove(atOffsets: offset)
             case .item(id: _, action: .checkBoxToggle):
                 return .send(.removeCheckedItems)
-                    .throttle(
+                    .debounce(
                         id: ItemCheckingID(),
                         for: 1,
-                        scheduler: DispatchQueue.main.animation(),
-                        latest: true
+                        scheduler: DispatchQueue.main.animation()
                     )
-//                    .debounce(
-//                        id: ItemCheckingID(),
-//                        for: 1,
-//                        scheduler: DispatchQueue.main.animation()
-//                    )
             }
             return .none
         }
-        .forEach(\.items, action: /InteractiveListAction.item(id:action:)) {
+        .forEach(\.items, action: /InteractiveListAction.item) {
             InteractiveListItemReducer()
         }
     }

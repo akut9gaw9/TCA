@@ -13,5 +13,6 @@ public enum InteractiveListItemAction: Equatable {
     
     // MARK: - Cases
     
+    /// Case handling toggle change
     case checkBoxToggle
 }
