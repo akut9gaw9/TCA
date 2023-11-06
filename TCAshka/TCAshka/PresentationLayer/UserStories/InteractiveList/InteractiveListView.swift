@@ -57,10 +57,15 @@ public struct InteractiveListView: View {
 // MARK: - Preview
 
 #Preview {
-    InteractiveListView(
-        store: Store(
-            initialState: InteractiveListState(),
-            reducer: InteractiveListReducer()
+    NavigationView {
+        InteractiveListView(
+            store: Store(
+                initialState: InteractiveListState(),
+                reducer: InteractiveListReducer()
+            )
         )
-    )
+    }
+    
+    
+    
 }
