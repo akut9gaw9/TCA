@@ -23,14 +23,6 @@ struct TCAshkaApp: App {
                     reducer: MainReducer()
                 )
             )
-        }
-        
-        
-        
-        
-        
-        
-        
-        
+        } 
     }
 }
