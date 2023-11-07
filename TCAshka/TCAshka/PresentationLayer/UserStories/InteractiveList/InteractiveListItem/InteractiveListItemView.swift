@@ -27,7 +27,7 @@ public struct InteractiveListItemView: View {
                     .frame(width: 29, height: 29)
                 Text(viewStore.title)
                     Spacer()
-                viewStore.image
+                Image(systemName: viewStore.imageName)
                     .renderingMode(.original)
                 Button {
                     viewStore.send(.checkBoxToggle)                    

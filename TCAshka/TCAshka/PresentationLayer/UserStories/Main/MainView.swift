@@ -25,9 +25,19 @@ public struct MainView: View {
                     Section(header: Text("Counters")) {
                         ForEach(viewStore.counters, id: \.self) { counterType in
                             Button {
-                                viewStore.send(.onItemTap(counterType))
+                                viewStore.send(.onCountersTap(counterType))
                             } label: {
                                 Text(counterType.title)
+                                    .foregroundColor(.listText)
+                            }
+                        }
+                    }
+                    Section(header: Text("Intermediate")) {
+                        ForEach(viewStore.intermediate, id: \.self) { intermediateType in
+                            Button {
+                                viewStore.send(.onIntermediateTap(intermediateType))
+                            } label: {
+                                Text(intermediateType.title)
                                     .foregroundColor(.listText)
                             }
                         }

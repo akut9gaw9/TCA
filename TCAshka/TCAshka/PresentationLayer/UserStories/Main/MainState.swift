@@ -17,11 +17,11 @@ public struct MainState: Equatable {
     public enum Counters: String, CaseIterable {
         
         // MARK: - Cases
+        
         case counter
         case fibonacciCounter
         case doubleCounter
         case counterBinding
-        case interactiveList
         
         // MARK: - Properties
         
@@ -35,6 +35,23 @@ public struct MainState: Equatable {
                 "Double Counter"
             case .counterBinding:
                 "Counter Binding"
+            }
+        }
+    }
+    
+    // MARK: - Intermediate
+    
+    /// An enumeration that contains Intermediate
+    public enum Intermediate: String, CaseIterable {
+        
+        // MARK: - Cases
+        
+        case interactiveList
+        
+        // MARK: - Properties
+        
+        public var title: String {
+            switch self {
             case .interactiveList:
                 "Interactive List"
             }
@@ -44,6 +61,8 @@ public struct MainState: Equatable {
     // MARK: - Properties
     
     public var counters = Counters.allCases
+    
+    public var intermediate = Intermediate.allCases
     
     // MARK: - Children
     

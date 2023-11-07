@@ -32,7 +32,7 @@ public struct MainReducer: Reducer {
         }
         Reduce { state, action in
             switch action {
-            case .onItemTap(let itemType):
+            case .onCountersTap(let itemType):
                 switch itemType {
                 case .counter:
                     return .send(.setCounterActive(true))
@@ -42,6 +42,9 @@ public struct MainReducer: Reducer {
                     return .send(.setDoubleCounterActive(true))
                 case .counterBinding:
                     return .send(.setCounterBindingActive(true))
+                }
+            case .onIntermediateTap(let itemType):
+                switch itemType {
                 case .interactiveList:
                     return .send(.setInteractiveListActive(true))
                 }

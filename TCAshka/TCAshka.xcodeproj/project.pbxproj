@@ -31,7 +31,7 @@
 		858950F42AF171BC00CCB771 /* CounterBindingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858950F32AF171BC00CCB771 /* CounterBindingAction.swift */; };
 		858950F72AF171CB00CCB771 /* CounterBindingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858950F62AF171CB00CCB771 /* CounterBindingReducer.swift */; };
 		858950FB2AF1721E00CCB771 /* CounterBindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858950FA2AF1721E00CCB771 /* CounterBindingView.swift */; };
-		85C983152AF780F6006A0FC8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C983142AF780F6006A0FC8 /* Constants.swift */; };
+		859E47852AFA823B00CD39F7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859E47842AFA823B00CD39F7 /* String.swift */; };
 		85F5B51D2AEA9BEB007779B7 /* TCAshkaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5B51C2AEA9BEB007779B7 /* TCAshkaApp.swift */; };
 		85F5B51F2AEA9BEB007779B7 /* FibonacciCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5B51E2AEA9BEB007779B7 /* FibonacciCounterView.swift */; };
 		85F5B5212AEA9BEC007779B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85F5B5202AEA9BEC007779B7 /* Assets.xcassets */; };
@@ -67,7 +67,7 @@
 		858950F32AF171BC00CCB771 /* CounterBindingAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterBindingAction.swift; sourceTree = "<group>"; };
 		858950F62AF171CB00CCB771 /* CounterBindingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterBindingReducer.swift; sourceTree = "<group>"; };
 		858950FA2AF1721E00CCB771 /* CounterBindingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterBindingView.swift; sourceTree = "<group>"; };
-		85C983142AF780F6006A0FC8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		859E47842AFA823B00CD39F7 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		85F5B5192AEA9BEB007779B7 /* TCAshka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCAshka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F5B51C2AEA9BEB007779B7 /* TCAshkaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAshkaApp.swift; sourceTree = "<group>"; };
 		85F5B51E2AEA9BEB007779B7 /* FibonacciCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciCounterView.swift; sourceTree = "<group>"; };
@@ -157,12 +157,20 @@
 			path = CounterBinding;
 			sourceTree = "<group>";
 		};
-		85C983132AF780ED006A0FC8 /* Common */ = {
+		859E47822AFA822C00CD39F7 /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
-				85C983142AF780F6006A0FC8 /* Constants.swift */,
+				859E47832AFA823300CD39F7 /* Extensions */,
 			);
-			path = Common;
+			path = CoreLayer;
+			sourceTree = "<group>";
+		};
+		859E47832AFA823300CD39F7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				859E47842AFA823B00CD39F7 /* String.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		85F5B5102AEA9BEB007779B7 = {
@@ -186,6 +194,7 @@
 			children = (
 				85F5B52B2AEA9CC3007779B7 /* ApplicationLayer */,
 				85F5B52C2AEA9CCB007779B7 /* PresentationLayer */,
+				859E47822AFA822C00CD39F7 /* CoreLayer */,
 				85F5B5202AEA9BEC007779B7 /* Assets.xcassets */,
 				85F5B5222AEA9BEC007779B7 /* Preview Content */,
 			);
@@ -211,7 +220,6 @@
 		85F5B52C2AEA9CCB007779B7 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				85C983132AF780ED006A0FC8 /* Common */,
 				85F5B5302AEA9CF5007779B7 /* UserStories */,
 			);
 			path = PresentationLayer;
@@ -220,12 +228,12 @@
 		85F5B5302AEA9CF5007779B7 /* UserStories */ = {
 			isa = PBXGroup;
 			children = (
-				851F4C032AF63CE700490922 /* InteractiveList */,
 				850200552AF4250900D3F91F /* Main */,
 				857775912AEC36BF009B8D4E /* Counter */,
 				85F5B5312AEA9CFD007779B7 /* FibonacciCounter */,
 				857775902AEC36A9009B8D4E /* DoubleCounter */,
 				858950F02AF1717000CCB771 /* CounterBinding */,
+				851F4C032AF63CE700490922 /* InteractiveList */,
 			);
 			path = UserStories;
 			sourceTree = "<group>";
@@ -322,7 +330,6 @@
 				850200572AF4258C00D3F91F /* MainView.swift in Sources */,
 				85F5B53F2AEAAD4E007779B7 /* FibonacciCounterAction.swift in Sources */,
 				857775A72AEC39D4009B8D4E /* DoubleCounterReducer.swift in Sources */,
-				85C983152AF780F6006A0FC8 /* Constants.swift in Sources */,
 				851F4C062AF63E0500490922 /* InteractiveListState.swift in Sources */,
 				85F5B5412AEAAD57007779B7 /* FibonacciCounterState.swift in Sources */,
 				858950FB2AF1721E00CCB771 /* CounterBindingView.swift in Sources */,
@@ -330,6 +337,7 @@
 				8502005B2AF4259B00D3F91F /* MainReducer.swift in Sources */,
 				851F4C082AF63E0D00490922 /* InteractiveListAction.swift in Sources */,
 				851F4C102AF63E4200490922 /* InteractiveListItemAction.swift in Sources */,
+				859E47852AFA823B00CD39F7 /* String.swift in Sources */,
 				85F5B51F2AEA9BEB007779B7 /* FibonacciCounterView.swift in Sources */,
 				851F4C0A2AF63E1500490922 /* InteractiveListReducer.swift in Sources */,
 				85F5B51D2AEA9BEB007779B7 /* TCAshkaApp.swift in Sources */,

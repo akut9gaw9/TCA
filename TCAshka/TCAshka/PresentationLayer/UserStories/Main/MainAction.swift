@@ -13,7 +13,9 @@ public enum MainAction: Equatable {
     
     // MARK: - General
     
-    case onItemTap(MainState.Counters)
+    case onCountersTap(MainState.Counters)
+    
+    case onIntermediateTap(MainState.Intermediate)
     
     // MARK: - Children
     
