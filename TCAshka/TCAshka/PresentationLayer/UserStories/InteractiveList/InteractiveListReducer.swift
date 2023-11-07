@@ -24,12 +24,12 @@ public struct InteractiveListReducer: Reducer {
             case .onAppear:
                 return .send(.creatingItems)
             case .creatingItems:
-                let randomItems = InteractiveListItemState.randomListItems().sorted { $0.title < $1.title }
+                let randomItems = InteractiveListItemState.randomListItems()
                 state.items = IdentifiedArray(uniqueElements: randomItems)
             case .addRandom:
                 let randomElement = InteractiveListItemState.createItem()
                 state.items.insert(randomElement, at: 0)
-                state.items.sorted { $0.title < $1.title }
+//                state.items.sorted
             case .removeCheckedItems:
                 state.items.removeAll(where: \.isChecked)
             case .delete(let offset):

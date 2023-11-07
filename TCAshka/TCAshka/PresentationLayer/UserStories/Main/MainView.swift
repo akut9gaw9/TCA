@@ -109,6 +109,25 @@ public struct MainView: View {
                         }
                     )
                 )
+                .background(
+                    NavigationLink(
+                        isActive: viewStore.binding(
+                            get: \.isInteractiveListActive,
+                            send: MainAction.setInteractiveListActive
+                        ),
+                        destination: {
+                            InteractiveListView(
+                                store: store.scope(
+                                    state: \.interactiveList,
+                                    action: MainAction.interactiveList
+                                )
+                            )
+                        },
+                        label: {
+                            EmptyView()
+                        }
+                    )
+                )
             }
         }
     }

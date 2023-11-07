@@ -21,6 +21,7 @@ public struct MainState: Equatable {
         case fibonacciCounter
         case doubleCounter
         case counterBinding
+        case interactiveList
         
         // MARK: - Properties
         
@@ -34,6 +35,8 @@ public struct MainState: Equatable {
                 "Double Counter"
             case .counterBinding:
                 "Counter Binding"
+            case .interactiveList:
+                "Interactive List"
             }
         }
     }
@@ -56,6 +59,9 @@ public struct MainState: Equatable {
     /// Instance `CounterBindingState`
     public var counterBinding = CounterBindingState()
     
+    /// Instance `InteractiveListState`
+    public var interactiveList = InteractiveListState()
+    
     // MARK: - Navigation
     
     /// Marks that the `Counter` is active, that is, on appear
@@ -69,4 +75,7 @@ public struct MainState: Equatable {
     
     /// Marks that the `CounterBinding` is active, that is, on appear
     public var isCounterBindingActive = false
+    
+    /// Marks that the `InteractiveList` is active, that is, on appear
+    public var isInteractiveListActive = false
 }

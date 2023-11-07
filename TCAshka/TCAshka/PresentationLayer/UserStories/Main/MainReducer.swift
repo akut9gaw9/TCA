@@ -27,6 +27,9 @@ public struct MainReducer: Reducer {
         Scope(state: \.counterBinding, action: /MainAction.counterBinding) {
             CounterBindingReducer()
         }
+        Scope(state: \.interactiveList, action: /MainAction.interactiveList) {
+            InteractiveListReducer()
+        }
         Reduce { state, action in
             switch action {
             case .onItemTap(let itemType):
@@ -39,6 +42,8 @@ public struct MainReducer: Reducer {
                     return .send(.setDoubleCounterActive(true))
                 case .counterBinding:
                     return .send(.setCounterBindingActive(true))
+                case .interactiveList:
+                    return .send(.setInteractiveListActive(true))
                 }
             case .setCounterActive(let isActive):
                 state.isCounterActive = isActive
@@ -48,6 +53,8 @@ public struct MainReducer: Reducer {
                 state.isDoubleCounterActive = isActive
             case .setCounterBindingActive(let isActive):
                 state.isCounterBindingActive = isActive
+            case .setInteractiveListActive(let isActive):
+                state.isInteractiveListActive = isActive
             default:
                 break
             }

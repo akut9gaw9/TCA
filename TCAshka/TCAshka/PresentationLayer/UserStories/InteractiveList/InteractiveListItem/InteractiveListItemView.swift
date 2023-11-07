@@ -30,9 +30,7 @@ public struct InteractiveListItemView: View {
                 viewStore.image
                     .renderingMode(.original)
                 Button {
-                    viewStore.send(.checkBoxToggle)
-                    let impact = UISelectionFeedbackGenerator()
-                    impact.selectionChanged()
+                    viewStore.send(.checkBoxToggle)                    
                 } label: {
                     Image(systemName: viewStore.isChecked ? "checkmark.square" : "square")
                 }

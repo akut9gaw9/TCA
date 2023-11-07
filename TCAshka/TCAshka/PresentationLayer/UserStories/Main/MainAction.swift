@@ -29,6 +29,9 @@ public enum MainAction: Equatable {
     /// Handling events using a child action `CounterBindingAction`
     case counterBinding(CounterBindingAction)
     
+    /// Handling events using a child action `InteractiveListAction`
+    case interactiveList(InteractiveListAction)
+    
     // MARK: - Navigation
     
     /// Case when the `Counter` is active
@@ -42,4 +45,7 @@ public enum MainAction: Equatable {
     
     /// Case when the `CounterBinding` is active
     case setCounterBindingActive(Bool)
+    
+    /// Case when the `InteractiveList` is active
+    case setInteractiveListActive(Bool)
 }
