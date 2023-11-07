@@ -43,4 +43,3 @@ public struct InteractiveListItemView: View {
         }
     }
 }
-

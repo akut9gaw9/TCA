@@ -21,42 +21,39 @@ public struct InteractiveListView: View {
     
     public var body: some View {
         WithViewStore(store) { viewStore in
-            NavigationView {
-                Form {
-                    let sections = viewStore.sections.keys.map{ $0 }.sorted()
-                    ForEach(sections, id: \.self) { key in
-                        Section {
-                            ForEachStore(
-                                store.scope(
-                                    state: { state in
-                                        IdentifiedArray(uniqueElements: state.sections[key] ?? [])
-                                    },
-                                    action: InteractiveListAction.item
-                                ),
-                                content: { store in
-                                    InteractiveListItemView(store: store)
-                                }
-                            )
-                            .onDelete { indexToDelete in
-                                viewStore.send(.delete(indexToDelete))
+            Form {
+                let sections = viewStore.sections.keys.map{ $0 }.sorted()
+                ForEach(sections, id: \.self) { key in
+                    Section {
+                        ForEachStore(
+                            store.scope(
+                                state: { state in
+                                    IdentifiedArray(uniqueElements: state.sections[key] ?? [])
+                                },
+                                action: InteractiveListAction.item
+                            ),
+                            content: { store in
+                                InteractiveListItemView(store: store)
                             }
-                            .buttonStyle(BorderlessButtonStyle())
-                            .textCase(nil)
-                        } header: {
-                            Text(key.description)
+                        )
+                        .onDelete { indexToDelete in
+                            viewStore.send(.delete(indexToDelete))
                         }
+                        .buttonStyle(BorderlessButtonStyle())
+                        .textCase(nil)
+                    } header: {
+                        Text(key.description)
                     }
                 }
             }
-            .toolbar(content: {
+            .navigationTitle("Basic list")
+            .toolbar {
                 Button {
                     viewStore.send(.addRandom, animation: .default)
                 } label: {
                     Text("Add")
                 }
-                
-            })
-            .navigationTitle("Basic list")
+            }
             .onAppear {
                 viewStore.send(.onAppear)
             }
@@ -67,12 +64,10 @@ public struct InteractiveListView: View {
 // MARK: - Preview
 
 #Preview {
-    NavigationView {
         InteractiveListView(
             store: Store(
                 initialState: InteractiveListState(),
                 reducer: InteractiveListReducer()
             )
         )
-    }
 }

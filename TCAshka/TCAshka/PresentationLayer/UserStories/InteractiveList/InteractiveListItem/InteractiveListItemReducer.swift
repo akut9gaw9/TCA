@@ -19,9 +19,8 @@ public struct InteractiveListItemReducer: Reducer {
             switch action {
             case .checkBoxToggle:
                 state.isChecked.toggle()
-                return .none
             }
+            return .none
         }
     }
 }
-
