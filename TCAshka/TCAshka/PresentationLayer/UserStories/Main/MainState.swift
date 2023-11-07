@@ -41,7 +41,7 @@ public struct MainState: Equatable {
     
     // MARK: - Intermediate
     
-    /// An enumeration that contains Intermediate
+    /// An enumeration that contains sections
     public enum Intermediate: String, CaseIterable {
         
         // MARK: - Cases
@@ -60,8 +60,10 @@ public struct MainState: Equatable {
     
     // MARK: - Properties
     
+    /// Contain all cases from enum `Counters`
     public var counters = Counters.allCases
     
+    /// Contain all cases from enum `Intermediate`
     public var intermediate = Intermediate.allCases
     
     // MARK: - Children
