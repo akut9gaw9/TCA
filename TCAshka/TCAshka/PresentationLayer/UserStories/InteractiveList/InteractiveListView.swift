@@ -22,13 +22,12 @@ public struct InteractiveListView: View {
     public var body: some View {
         WithViewStore(store) { viewStore in
             Form {
-                let sections = viewStore.sections.keys.map{ $0 }.sorted()
-                ForEach(sections, id: \.self) { key in
+                ForEach(viewStore.sections, id: \.self) { symbol in
                     Section {
                         ForEachStore(
                             store.scope(
                                 state: { state in
-                                    IdentifiedArray(uniqueElements: state.sections[key] ?? [])
+                                    state.items.filter { $0.title.hasPrefix(symbol) }
                                 },
                                 action: InteractiveListAction.item
                             ),
@@ -42,7 +41,7 @@ public struct InteractiveListView: View {
                         .buttonStyle(BorderlessButtonStyle())
                         .textCase(nil)
                     } header: {
-                        Text(key.description)
+                        Text(symbol)
                     }
                 }
             }
@@ -64,10 +63,12 @@ public struct InteractiveListView: View {
 // MARK: - Preview
 
 #Preview {
+    NavigationView {
         InteractiveListView(
             store: Store(
                 initialState: InteractiveListState(),
                 reducer: InteractiveListReducer()
             )
         )
+    }
 }

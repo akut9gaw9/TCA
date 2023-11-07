@@ -3,4 +3,84 @@
    uuid = "F806B1AD-4C1F-40CE-B3F0-68ABF56963EE"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27D4E8D3-A2FE-4784-AD7E-9FF20B05F999"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TCAshka/PresentationLayer/UserStories/InteractiveList/InteractiveListReducer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "27D4E8D3-A2FE-4784-AD7E-9FF20B05F999 - 6f972617e0360a40"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (inout TCAshka.InteractiveListState, TCAshka.InteractiveListAction) -&gt; ComposableArchitecture.Effect&lt;TCAshka.InteractiveListAction&gt; in TCAshka.InteractiveListReducer.body.getter : some"
+                  moduleName = "TCAshka"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stanislav/TCA/TCAshka/TCAshka/PresentationLayer/UserStories/InteractiveList/InteractiveListReducer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "560">
+               </Location>
+               <Location
+                  uuid = "27D4E8D3-A2FE-4784-AD7E-9FF20B05F999 - 6f972617e0360a40"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (inout TCAshka.InteractiveListState, TCAshka.InteractiveListAction) -&gt; ComposableArchitecture.Effect&lt;TCAshka.InteractiveListAction&gt; in TCAshka.InteractiveListReducer.body.getter : some"
+                  moduleName = "TCAshka"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stanislav/TCA/TCAshka/TCAshka/PresentationLayer/UserStories/InteractiveList/InteractiveListReducer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "564">
+               </Location>
+               <Location
+                  uuid = "27D4E8D3-A2FE-4784-AD7E-9FF20B05F999 - 6f972617e0360a40"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (inout TCAshka.InteractiveListState, TCAshka.InteractiveListAction) -&gt; ComposableArchitecture.Effect&lt;TCAshka.InteractiveListAction&gt; in TCAshka.InteractiveListReducer.body.getter : some"
+                  moduleName = "TCAshka"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stanislav/TCA/TCAshka/TCAshka/PresentationLayer/UserStories/InteractiveList/InteractiveListReducer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "548">
+               </Location>
+               <Location
+                  uuid = "27D4E8D3-A2FE-4784-AD7E-9FF20B05F999 - 6f972617e0360a40"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (inout TCAshka.InteractiveListState, TCAshka.InteractiveListAction) -&gt; ComposableArchitecture.Effect&lt;TCAshka.InteractiveListAction&gt; in TCAshka.InteractiveListReducer.body.getter : some"
+                  moduleName = "TCAshka"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stanislav/TCA/TCAshka/TCAshka/PresentationLayer/UserStories/InteractiveList/InteractiveListReducer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "620">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

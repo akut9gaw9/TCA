@@ -13,14 +13,20 @@ public struct InteractiveListState: Equatable {
     
     // MARK: - Properties
     
-    public var sectionsOne: Set<String> = []
+    public var sections: [String] {
+        Set(
+            items.map{
+                String($0.title.first.unsafelyUnwrapped)
+            }
+        ).sorted()
+    }
     
     /// A dictionary that stores the first letters of each element of the `items` array for convenient creation of sections in View
-    public var sections: [String : [InteractiveListItemState]] {
-        Dictionary(grouping: self.items.elements, by: { element -> String in
-            return String(element.title.first.unsafelyUnwrapped)
-        })
-    }
+//    public var sections: [String : [InteractiveListItemState]] {
+//        Dictionary(grouping: self.items.elements, by: { element -> String in
+//            return String(element.title.first.unsafelyUnwrapped)
+//        })
+//    }
     
     // MARK: - Children
     
