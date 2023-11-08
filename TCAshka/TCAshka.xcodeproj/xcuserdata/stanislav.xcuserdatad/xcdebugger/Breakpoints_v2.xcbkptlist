@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "27D4E8D3-A2FE-4784-AD7E-9FF20B05F999"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TCAshka/PresentationLayer/UserStories/InteractiveList/InteractiveListReducer.swift"

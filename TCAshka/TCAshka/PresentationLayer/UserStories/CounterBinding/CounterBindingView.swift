@@ -15,7 +15,7 @@ public struct CounterBindingView: View {
     // MARK: - Properties
     
     /// The store powering the `CounterBinding` feature
-    public var store: StoreOf<CounterBindingReducer>
+    public let store: StoreOf<CounterBindingReducer>
     
     // MARK: - View
     

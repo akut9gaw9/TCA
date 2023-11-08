@@ -14,7 +14,7 @@ public struct MainView: View {
     
     // MARK: - Properties
     
-    public var store: StoreOf<MainReducer>
+    public let store: StoreOf<MainReducer>
     
     // MARK: - View
     

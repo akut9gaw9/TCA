@@ -15,7 +15,7 @@ public struct InteractiveListItemView: View {
     // MARK: - Properties
     
     /// The store powering the `InteractiveListItem` feature
-    public var store: StoreOf<InteractiveListItemReducer>
+    public let store: StoreOf<InteractiveListItemReducer>
     
     // MARK: - View
     
@@ -41,3 +41,4 @@ public struct InteractiveListItemView: View {
         }
     }
 }
+

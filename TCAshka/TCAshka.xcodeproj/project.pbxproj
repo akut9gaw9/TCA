@@ -11,6 +11,22 @@
 		850200592AF4259400D3F91F /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850200582AF4259400D3F91F /* MainState.swift */; };
 		8502005B2AF4259B00D3F91F /* MainReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8502005A2AF4259B00D3F91F /* MainReducer.swift */; };
 		8502005D2AF425A800D3F91F /* MainAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8502005C2AF425A800D3F91F /* MainAction.swift */; };
+		850F43C82AFB9A68001D1E22 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850F43C72AFB9A68001D1E22 /* AppConstants.swift */; };
+		850F43D12AFB9B8D001D1E22 /* SpaceflightServiceImpementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850F43CC2AFB9B8D001D1E22 /* SpaceflightServiceImpementation.swift */; };
+		850F43D22AFB9B8D001D1E22 /* SpaceflightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850F43CD2AFB9B8D001D1E22 /* SpaceflightService.swift */; };
+		850F43D32AFB9B8D001D1E22 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850F43D02AFB9B8D001D1E22 /* WebService.swift */; };
+		850F43D62AFB9BDB001D1E22 /* ServiceCore in Frameworks */ = {isa = PBXBuildFile; productRef = 850F43D52AFB9BDB001D1E22 /* ServiceCore */; };
+		850F43DE2AFB9C0B001D1E22 /* EventsPlainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850F43DA2AFB9C0B001D1E22 /* EventsPlainObject.swift */; };
+		850F43DF2AFB9C0B001D1E22 /* BlogPlainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850F43DB2AFB9C0B001D1E22 /* BlogPlainObject.swift */; };
+		850F43E02AFB9C0B001D1E22 /* ArticlePlainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850F43DC2AFB9C0B001D1E22 /* ArticlePlainObject.swift */; };
+		850F43E12AFB9C0B001D1E22 /* LaunchesPlainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850F43DD2AFB9C0B001D1E22 /* LaunchesPlainObject.swift */; };
+		850F43E82AFB9C2F001D1E22 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850F43E32AFB9C2F001D1E22 /* String.swift */; };
+		850F43E92AFB9C2F001D1E22 /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850F43E52AFB9C2F001D1E22 /* TimeInterval.swift */; };
+		850F43EA2AFB9C2F001D1E22 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850F43E72AFB9C2F001D1E22 /* View.swift */; };
+		850F43EE2AFB9D92001D1E22 /* ArticleListItemState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850F43ED2AFB9D92001D1E22 /* ArticleListItemState.swift */; };
+		850F43F02AFB9D9E001D1E22 /* ArticleListItemAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850F43EF2AFB9D9E001D1E22 /* ArticleListItemAction.swift */; };
+		850F43F22AFB9DA8001D1E22 /* ArticleListItemReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850F43F12AFB9DA8001D1E22 /* ArticleListItemReducer.swift */; };
+		850F43F42AFB9DB0001D1E22 /* ArticleListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850F43F32AFB9DB0001D1E22 /* ArticleListItemView.swift */; };
 		851F4C062AF63E0500490922 /* InteractiveListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F4C052AF63E0500490922 /* InteractiveListState.swift */; };
 		851F4C082AF63E0D00490922 /* InteractiveListAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F4C072AF63E0D00490922 /* InteractiveListAction.swift */; };
 		851F4C0A2AF63E1500490922 /* InteractiveListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F4C092AF63E1500490922 /* InteractiveListReducer.swift */; };
@@ -31,7 +47,12 @@
 		858950F42AF171BC00CCB771 /* CounterBindingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858950F32AF171BC00CCB771 /* CounterBindingAction.swift */; };
 		858950F72AF171CB00CCB771 /* CounterBindingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858950F62AF171CB00CCB771 /* CounterBindingReducer.swift */; };
 		858950FB2AF1721E00CCB771 /* CounterBindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858950FA2AF1721E00CCB771 /* CounterBindingView.swift */; };
-		859E47852AFA823B00CD39F7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859E47842AFA823B00CD39F7 /* String.swift */; };
+		859D48452AFBD3BF000473A2 /* SpaceflightServiceAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859D48442AFBD3BF000473A2 /* SpaceflightServiceAction.swift */; };
+		859D48482AFBDB78000473A2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 859D48472AFBDB78000473A2 /* Kingfisher */; };
+		859D484D2AFBDEEB000473A2 /* ArticleListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859D484C2AFBDEEB000473A2 /* ArticleListReducer.swift */; };
+		859D484F2AFBDEF8000473A2 /* ArticleListAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859D484E2AFBDEF8000473A2 /* ArticleListAction.swift */; };
+		859D48512AFBDF00000473A2 /* ArticleListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859D48502AFBDF00000473A2 /* ArticleListState.swift */; };
+		859D48532AFBE131000473A2 /* ArticleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859D48522AFBE131000473A2 /* ArticleListView.swift */; };
 		85F5B51D2AEA9BEB007779B7 /* TCAshkaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5B51C2AEA9BEB007779B7 /* TCAshkaApp.swift */; };
 		85F5B51F2AEA9BEB007779B7 /* FibonacciCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5B51E2AEA9BEB007779B7 /* FibonacciCounterView.swift */; };
 		85F5B5212AEA9BEC007779B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85F5B5202AEA9BEC007779B7 /* Assets.xcassets */; };
@@ -47,6 +68,21 @@
 		850200582AF4259400D3F91F /* MainState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
 		8502005A2AF4259B00D3F91F /* MainReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainReducer.swift; sourceTree = "<group>"; };
 		8502005C2AF425A800D3F91F /* MainAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAction.swift; sourceTree = "<group>"; };
+		850F43C72AFB9A68001D1E22 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		850F43CC2AFB9B8D001D1E22 /* SpaceflightServiceImpementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceflightServiceImpementation.swift; sourceTree = "<group>"; };
+		850F43CD2AFB9B8D001D1E22 /* SpaceflightService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceflightService.swift; sourceTree = "<group>"; };
+		850F43D02AFB9B8D001D1E22 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		850F43DA2AFB9C0B001D1E22 /* EventsPlainObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsPlainObject.swift; sourceTree = "<group>"; };
+		850F43DB2AFB9C0B001D1E22 /* BlogPlainObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogPlainObject.swift; sourceTree = "<group>"; };
+		850F43DC2AFB9C0B001D1E22 /* ArticlePlainObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlePlainObject.swift; sourceTree = "<group>"; };
+		850F43DD2AFB9C0B001D1E22 /* LaunchesPlainObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchesPlainObject.swift; sourceTree = "<group>"; };
+		850F43E32AFB9C2F001D1E22 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		850F43E52AFB9C2F001D1E22 /* TimeInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
+		850F43E72AFB9C2F001D1E22 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		850F43ED2AFB9D92001D1E22 /* ArticleListItemState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListItemState.swift; sourceTree = "<group>"; };
+		850F43EF2AFB9D9E001D1E22 /* ArticleListItemAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListItemAction.swift; sourceTree = "<group>"; };
+		850F43F12AFB9DA8001D1E22 /* ArticleListItemReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListItemReducer.swift; sourceTree = "<group>"; };
+		850F43F32AFB9DB0001D1E22 /* ArticleListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListItemView.swift; sourceTree = "<group>"; };
 		851F4C052AF63E0500490922 /* InteractiveListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveListState.swift; sourceTree = "<group>"; };
 		851F4C072AF63E0D00490922 /* InteractiveListAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveListAction.swift; sourceTree = "<group>"; };
 		851F4C092AF63E1500490922 /* InteractiveListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveListReducer.swift; sourceTree = "<group>"; };
@@ -67,7 +103,11 @@
 		858950F32AF171BC00CCB771 /* CounterBindingAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterBindingAction.swift; sourceTree = "<group>"; };
 		858950F62AF171CB00CCB771 /* CounterBindingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterBindingReducer.swift; sourceTree = "<group>"; };
 		858950FA2AF1721E00CCB771 /* CounterBindingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterBindingView.swift; sourceTree = "<group>"; };
-		859E47842AFA823B00CD39F7 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		859D48442AFBD3BF000473A2 /* SpaceflightServiceAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceflightServiceAction.swift; sourceTree = "<group>"; };
+		859D484C2AFBDEEB000473A2 /* ArticleListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListReducer.swift; sourceTree = "<group>"; };
+		859D484E2AFBDEF8000473A2 /* ArticleListAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListAction.swift; sourceTree = "<group>"; };
+		859D48502AFBDF00000473A2 /* ArticleListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListState.swift; sourceTree = "<group>"; };
+		859D48522AFBE131000473A2 /* ArticleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListView.swift; sourceTree = "<group>"; };
 		85F5B5192AEA9BEB007779B7 /* TCAshka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCAshka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F5B51C2AEA9BEB007779B7 /* TCAshkaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAshkaApp.swift; sourceTree = "<group>"; };
 		85F5B51E2AEA9BEB007779B7 /* FibonacciCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciCounterView.swift; sourceTree = "<group>"; };
@@ -83,7 +123,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				859D48482AFBDB78000473A2 /* Kingfisher in Frameworks */,
 				85FEC5302AEF9B7C00829E0C /* ComposableArchitecture in Frameworks */,
+				850F43D62AFB9BDB001D1E22 /* ServiceCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +141,131 @@
 				850200582AF4259400D3F91F /* MainState.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		850F43C52AFB9A5B001D1E22 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				850F43C62AFB9A63001D1E22 /* Constants */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		850F43C62AFB9A63001D1E22 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				850F43C72AFB9A68001D1E22 /* AppConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		850F43C92AFB9B4F001D1E22 /* BusinessLayer */ = {
+			isa = PBXGroup;
+			children = (
+				850F43CA2AFB9B8C001D1E22 /* Services */,
+			);
+			path = BusinessLayer;
+			sourceTree = "<group>";
+		};
+		850F43CA2AFB9B8C001D1E22 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				850F43CB2AFB9B8D001D1E22 /* SpaceflightService */,
+				850F43CE2AFB9B8D001D1E22 /* Extensions */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		850F43CB2AFB9B8D001D1E22 /* SpaceflightService */ = {
+			isa = PBXGroup;
+			children = (
+				850F43CD2AFB9B8D001D1E22 /* SpaceflightService.swift */,
+				859D48442AFBD3BF000473A2 /* SpaceflightServiceAction.swift */,
+				850F43CC2AFB9B8D001D1E22 /* SpaceflightServiceImpementation.swift */,
+			);
+			path = SpaceflightService;
+			sourceTree = "<group>";
+		};
+		850F43CE2AFB9B8D001D1E22 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				850F43CF2AFB9B8D001D1E22 /* WebService */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		850F43CF2AFB9B8D001D1E22 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				850F43D02AFB9B8D001D1E22 /* WebService.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		850F43D72AFB9BF5001D1E22 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				850F43D92AFB9C0B001D1E22 /* Plains */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		850F43D92AFB9C0B001D1E22 /* Plains */ = {
+			isa = PBXGroup;
+			children = (
+				850F43DC2AFB9C0B001D1E22 /* ArticlePlainObject.swift */,
+				850F43DA2AFB9C0B001D1E22 /* EventsPlainObject.swift */,
+				850F43DB2AFB9C0B001D1E22 /* BlogPlainObject.swift */,
+				850F43DD2AFB9C0B001D1E22 /* LaunchesPlainObject.swift */,
+			);
+			path = Plains;
+			sourceTree = "<group>";
+		};
+		850F43E22AFB9C2F001D1E22 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				850F43E32AFB9C2F001D1E22 /* String.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		850F43E42AFB9C2F001D1E22 /* TimeInterval */ = {
+			isa = PBXGroup;
+			children = (
+				850F43E52AFB9C2F001D1E22 /* TimeInterval.swift */,
+			);
+			path = TimeInterval;
+			sourceTree = "<group>";
+		};
+		850F43E62AFB9C2F001D1E22 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				850F43E72AFB9C2F001D1E22 /* View.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		850F43EB2AFB9CE5001D1E22 /* SpaceflightNews */ = {
+			isa = PBXGroup;
+			children = (
+				859D48522AFBE131000473A2 /* ArticleListView.swift */,
+				859D484C2AFBDEEB000473A2 /* ArticleListReducer.swift */,
+				859D484E2AFBDEF8000473A2 /* ArticleListAction.swift */,
+				859D48502AFBDF00000473A2 /* ArticleListState.swift */,
+				850F43EC2AFB9D01001D1E22 /* ArticleListItem */,
+			);
+			path = SpaceflightNews;
+			sourceTree = "<group>";
+		};
+		850F43EC2AFB9D01001D1E22 /* ArticleListItem */ = {
+			isa = PBXGroup;
+			children = (
+				850F43F32AFB9DB0001D1E22 /* ArticleListItemView.swift */,
+				850F43F12AFB9DA8001D1E22 /* ArticleListItemReducer.swift */,
+				850F43EF2AFB9D9E001D1E22 /* ArticleListItemAction.swift */,
+				850F43ED2AFB9D92001D1E22 /* ArticleListItemState.swift */,
+			);
+			path = ArticleListItem;
 			sourceTree = "<group>";
 		};
 		851F4C032AF63CE700490922 /* InteractiveList */ = {
@@ -168,7 +335,9 @@
 		859E47832AFA823300CD39F7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				859E47842AFA823B00CD39F7 /* String.swift */,
+				850F43E22AFB9C2F001D1E22 /* String */,
+				850F43E42AFB9C2F001D1E22 /* TimeInterval */,
+				850F43E62AFB9C2F001D1E22 /* View */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -194,7 +363,9 @@
 			children = (
 				85F5B52B2AEA9CC3007779B7 /* ApplicationLayer */,
 				85F5B52C2AEA9CCB007779B7 /* PresentationLayer */,
+				850F43C92AFB9B4F001D1E22 /* BusinessLayer */,
 				859E47822AFA822C00CD39F7 /* CoreLayer */,
+				850F43D72AFB9BF5001D1E22 /* Models */,
 				85F5B5202AEA9BEC007779B7 /* Assets.xcassets */,
 				85F5B5222AEA9BEC007779B7 /* Preview Content */,
 			);
@@ -220,6 +391,7 @@
 		85F5B52C2AEA9CCB007779B7 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				850F43C52AFB9A5B001D1E22 /* Common */,
 				85F5B5302AEA9CF5007779B7 /* UserStories */,
 			);
 			path = PresentationLayer;
@@ -234,6 +406,7 @@
 				857775902AEC36A9009B8D4E /* DoubleCounter */,
 				858950F02AF1717000CCB771 /* CounterBinding */,
 				851F4C032AF63CE700490922 /* InteractiveList */,
+				850F43EB2AFB9CE5001D1E22 /* SpaceflightNews */,
 			);
 			path = UserStories;
 			sourceTree = "<group>";
@@ -267,6 +440,8 @@
 			name = TCAshka;
 			packageProductDependencies = (
 				85FEC52F2AEF9B7C00829E0C /* ComposableArchitecture */,
+				850F43D52AFB9BDB001D1E22 /* ServiceCore */,
+				859D48472AFBDB78000473A2 /* Kingfisher */,
 			);
 			productName = TCAshka;
 			productReference = 85F5B5192AEA9BEB007779B7 /* TCAshka.app */;
@@ -298,6 +473,8 @@
 			mainGroup = 85F5B5102AEA9BEB007779B7;
 			packageReferences = (
 				85FEC52E2AEF9B7C00829E0C /* XCRemoteSwiftPackageReference "TCA" */,
+				850F43D42AFB9BDB001D1E22 /* XCRemoteSwiftPackageReference "service-core" */,
+				859D48462AFBDB78000473A2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 85F5B51A2AEA9BEB007779B7 /* Products */;
 			projectDirPath = "";
@@ -325,36 +502,55 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				859D484F2AFBDEF8000473A2 /* ArticleListAction.swift in Sources */,
+				850F43D22AFB9B8D001D1E22 /* SpaceflightService.swift in Sources */,
+				850F43E92AFB9C2F001D1E22 /* TimeInterval.swift in Sources */,
 				8577759E2AEC37AA009B8D4E /* CounterState.swift in Sources */,
 				851F4C0E2AF63E3900490922 /* InteractiveListItemState.swift in Sources */,
 				850200572AF4258C00D3F91F /* MainView.swift in Sources */,
+				850F43D32AFB9B8D001D1E22 /* WebService.swift in Sources */,
 				85F5B53F2AEAAD4E007779B7 /* FibonacciCounterAction.swift in Sources */,
+				859D48452AFBD3BF000473A2 /* SpaceflightServiceAction.swift in Sources */,
 				857775A72AEC39D4009B8D4E /* DoubleCounterReducer.swift in Sources */,
 				851F4C062AF63E0500490922 /* InteractiveListState.swift in Sources */,
 				85F5B5412AEAAD57007779B7 /* FibonacciCounterState.swift in Sources */,
 				858950FB2AF1721E00CCB771 /* CounterBindingView.swift in Sources */,
+				850F43E12AFB9C0B001D1E22 /* LaunchesPlainObject.swift in Sources */,
 				850200592AF4259400D3F91F /* MainState.swift in Sources */,
+				859D48532AFBE131000473A2 /* ArticleListView.swift in Sources */,
+				850F43DF2AFB9C0B001D1E22 /* BlogPlainObject.swift in Sources */,
+				850F43C82AFB9A68001D1E22 /* AppConstants.swift in Sources */,
 				8502005B2AF4259B00D3F91F /* MainReducer.swift in Sources */,
 				851F4C082AF63E0D00490922 /* InteractiveListAction.swift in Sources */,
+				850F43F02AFB9D9E001D1E22 /* ArticleListItemAction.swift in Sources */,
 				851F4C102AF63E4200490922 /* InteractiveListItemAction.swift in Sources */,
-				859E47852AFA823B00CD39F7 /* String.swift in Sources */,
+				859D484D2AFBDEEB000473A2 /* ArticleListReducer.swift in Sources */,
+				850F43EA2AFB9C2F001D1E22 /* View.swift in Sources */,
+				859D48512AFBDF00000473A2 /* ArticleListState.swift in Sources */,
 				85F5B51F2AEA9BEB007779B7 /* FibonacciCounterView.swift in Sources */,
 				851F4C0A2AF63E1500490922 /* InteractiveListReducer.swift in Sources */,
 				85F5B51D2AEA9BEB007779B7 /* TCAshkaApp.swift in Sources */,
 				857775AB2AEC39E2009B8D4E /* DoubleCounterState.swift in Sources */,
 				851F4C122AF63E4700490922 /* InteractiveListItemReducer.swift in Sources */,
+				850F43E02AFB9C0B001D1E22 /* ArticlePlainObject.swift in Sources */,
 				858950F42AF171BC00CCB771 /* CounterBindingAction.swift in Sources */,
 				8577759C2AEC37A5009B8D4E /* CounterAction.swift in Sources */,
+				850F43D12AFB9B8D001D1E22 /* SpaceflightServiceImpementation.swift in Sources */,
+				850F43E82AFB9C2F001D1E22 /* String.swift in Sources */,
 				85F5B5342AEA9F3D007779B7 /* FibonacciCounterReducer.swift in Sources */,
 				8502005D2AF425A800D3F91F /* MainAction.swift in Sources */,
 				851F4C142AF63E4E00490922 /* InteractiveListItemView.swift in Sources */,
+				850F43DE2AFB9C0B001D1E22 /* EventsPlainObject.swift in Sources */,
 				8577759A2AEC376B009B8D4E /* CounterReducer.swift in Sources */,
 				858950F72AF171CB00CCB771 /* CounterBindingReducer.swift in Sources */,
 				851F4C0C2AF63E1D00490922 /* InteractiveListView.swift in Sources */,
 				857775A92AEC39DB009B8D4E /* DoubleCounterAction.swift in Sources */,
+				850F43F42AFB9DB0001D1E22 /* ArticleListItemView.swift in Sources */,
 				857775A42AEC39C6009B8D4E /* DoubleCounterView.swift in Sources */,
 				858950F22AF171B100CCB771 /* CounterBindingState.swift in Sources */,
 				857775972AEC3729009B8D4E /* CounterView.swift in Sources */,
+				850F43F22AFB9DA8001D1E22 /* ArticleListItemReducer.swift in Sources */,
+				850F43EE2AFB9D92001D1E22 /* ArticleListItemState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +760,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		850F43D42AFB9BDB001D1E22 /* XCRemoteSwiftPackageReference "service-core" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Incetro/service-core.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		859D48462AFBDB78000473A2 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.0;
+			};
+		};
 		85FEC52E2AEF9B7C00829E0C /* XCRemoteSwiftPackageReference "TCA" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Incetro/TCA.git";
@@ -575,6 +787,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		850F43D52AFB9BDB001D1E22 /* ServiceCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 850F43D42AFB9BDB001D1E22 /* XCRemoteSwiftPackageReference "service-core" */;
+			productName = ServiceCore;
+		};
+		859D48472AFBDB78000473A2 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 859D48462AFBDB78000473A2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		85FEC52F2AEF9B7C00829E0C /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 85FEC52E2AEF9B7C00829E0C /* XCRemoteSwiftPackageReference "TCA" */;

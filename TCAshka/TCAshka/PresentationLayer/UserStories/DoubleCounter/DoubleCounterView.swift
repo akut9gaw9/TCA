@@ -15,7 +15,7 @@ public struct DoubleCounterView: View {
     // MARK: - Properties
     
     /// The store powering the `ExplorerTutorialDetailed` feature
-    public var store: StoreOf<DoubleCounterReducer>
+    public let store: StoreOf<DoubleCounterReducer>
     
     // MARK: - View
     
