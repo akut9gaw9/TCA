@@ -7,6 +7,7 @@
 
 import Foundation
 import ComposableArchitecture
+import HTTPTransport
 
 // MARK: - MainReducer
 
@@ -30,6 +31,9 @@ public struct MainReducer: Reducer {
         Scope(state: \.interactiveList, action: /MainAction.interactiveList) {
             InteractiveListReducer()
         }
+        Scope(state: \.articleList, action: /MainAction.articleList) {
+            ArticleListReducer(spaceflightService: SpaceflightServiceImpementation(transport: HTTPTransport()))
+        }
         Reduce { state, action in
             switch action {
             case .onCountersTap(let itemType):
@@ -47,6 +51,8 @@ public struct MainReducer: Reducer {
                 switch itemType {
                 case .interactiveList:
                     return .send(.setInteractiveListActive(true))
+                case .articleList:
+                    return .send(.setArticleListActive(true))
                 }
             case .setCounterActive(let isActive):
                 state.isCounterActive = isActive
@@ -58,6 +64,8 @@ public struct MainReducer: Reducer {
                 state.isCounterBindingActive = isActive
             case .setInteractiveListActive(let isActive):
                 state.isInteractiveListActive = isActive
+            case .setArticleListActive(let isActive):
+                state.isArticleListActive = isActive
             default:
                 break
             }

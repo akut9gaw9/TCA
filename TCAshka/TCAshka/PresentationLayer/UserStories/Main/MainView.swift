@@ -138,6 +138,25 @@ public struct MainView: View {
                         }
                     )
                 )
+                .background(
+                    NavigationLink(
+                        isActive: viewStore.binding(
+                            get: \.isArticleListActive,
+                            send: MainAction.setArticleListActive
+                        ),
+                        destination: {
+                            ArticleListView(
+                                store: store.scope(
+                                    state: \.articleList,
+                                    action: MainAction.articleList
+                                )
+                            )
+                        },
+                        label: {
+                            EmptyView()
+                        }
+                    )
+                )
             }
         }
     }

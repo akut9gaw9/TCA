@@ -47,6 +47,7 @@ public struct MainState: Equatable {
         // MARK: - Cases
         
         case interactiveList
+        case articleList
         
         // MARK: - Properties
         
@@ -54,6 +55,8 @@ public struct MainState: Equatable {
             switch self {
             case .interactiveList:
                 "Interactive List"
+            case .articleList:
+                "Article List"
             }
         }
     }
@@ -83,6 +86,9 @@ public struct MainState: Equatable {
     /// Instance `InteractiveListState`
     public var interactiveList = InteractiveListState()
     
+    /// Instance `ArticleListState`
+    public var articleList = ArticleListState()
+    
     // MARK: - Navigation
     
     /// Marks that the `Counter` is active, that is, on appear
@@ -99,4 +105,7 @@ public struct MainState: Equatable {
     
     /// Marks that the `InteractiveList` is active, that is, on appear
     public var isInteractiveListActive = false
+    
+    /// Marks that the `ArticleList` is active, that is, on appear
+    public var isArticleListActive = false
 }
