@@ -14,5 +14,6 @@ public struct ArticleListState: Equatable {
     
     // MARK: - Properties
     
+    /// Array of type `InteractiveListItemState` in the `IndentifiedArrayOf` wrapper
     public var articles = IdentifiedArrayOf<ArticleListItemState>()
 }

@@ -18,7 +18,7 @@ public struct ArticleListItemReducer: Reducer {
         Reduce { state, action in
             switch action {
             case .onAppear:
-                print("load")
+                print("test")
             }
             return .none
         }

@@ -36,6 +36,9 @@ public enum MainAction: Equatable {
     /// Handling events using a child action `InteractiveListAction`
     case interactiveList(InteractiveListAction)
     
+    /// Handling events using a child action `ArticleListAction`
+    case articleList(ArticleListAction)
+    
     // MARK: - Navigation
     
     /// Case when the `Counter` is active
@@ -52,4 +55,7 @@ public enum MainAction: Equatable {
     
     /// Case when the `InteractiveList` is active
     case setInteractiveListActive(Bool)
+    
+    /// Case when the `ArticleList` is active
+    case setArticleListActive(Bool)
 }

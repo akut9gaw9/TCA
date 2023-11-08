@@ -9,6 +9,7 @@ import Foundation
 
 // MARK: - String
 
+/// This extension contains methods that convert an string to a valid date
 extension String {
     
     /// Creating the correct date type format from string type
@@ -31,6 +32,10 @@ extension String {
         dateFormatter.dateFormat = "MMM d, yyyy"
         return dateFormatter.date(from: self)
     }
+}
+
+/// This extension contains methods that format letters in a string
+extension String {
     
     /// Capitalized first letter in string
     /// - Returns: string whis capitalized first letter

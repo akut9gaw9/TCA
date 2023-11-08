@@ -42,7 +42,7 @@ public struct ArticleListReducer: Reducer {
             case .listArticlesNews(.success(.articlesObtained(let articles))):
                 state.articles = IdentifiedArray(uniqueElements: articles.map(ArticleListItemState.init))
             case .item(id: _, action: .onAppear):
-                print("tyt")
+                print("test")
             default:
                 break
             }
