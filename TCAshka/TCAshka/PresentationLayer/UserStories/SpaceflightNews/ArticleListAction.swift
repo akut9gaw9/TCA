@@ -16,10 +16,12 @@ public enum ArticleListAction: Equatable {
     /// Executes a request to retrieve articles when a view appears
     case onAppear
     
-    /// Processing success and failure cases of a request
-    case listArticlesNews(Result<SpaceflightServiceAction, NSError>)
-    
     // MARK: - Children
     
-    case item(id: UUID, action: ArticleListItemAction)
+    case item(id: ArticleListItemState.ID, action: ArticleListItemAction)
+    
+    // MARK: - Services
+    
+    /// Processing success and failure cases of a request
+    case listArticlesNews(Result<SpaceflightServiceAction, SpaceflightServiceError>)
 }

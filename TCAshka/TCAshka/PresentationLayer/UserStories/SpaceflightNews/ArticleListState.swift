@@ -12,7 +12,7 @@ import ComposableArchitecture
 
 public struct ArticleListState: Equatable {
     
-    // MARK: - Properties
+    // MARK: - Children
     
     /// Array of type `InteractiveListItemState` in the `IndentifiedArrayOf` wrapper
     public var articles = IdentifiedArrayOf<ArticleListItemState>()

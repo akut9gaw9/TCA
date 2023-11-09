@@ -14,17 +14,13 @@ public struct ArticleListReducer: Reducer {
     
     // MARK: - Properties
     
-    var spaceflightService: SpaceflightService
+    private let spaceflightService: SpaceflightService
     
     // MARK: - Initialization
     
     public init(spaceflightService: SpaceflightService) {
         self.spaceflightService = spaceflightService
     }
-    
-    // MARK: - IDs
-    
-    private struct ItemCheckingID: Hashable {}
     
     // MARK: - Reducer
     

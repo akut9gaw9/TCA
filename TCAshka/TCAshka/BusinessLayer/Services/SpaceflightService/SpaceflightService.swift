@@ -5,7 +5,21 @@
 //  Created by Stanislav on 17.10.2023.
 //
 
+import Foundation
 import ServiceCore
+
+// MARK: - SpaceflightServiceAction
+
+public enum SpaceflightServiceAction: Equatable {
+    
+    // MARK: - Cases
+    
+    case articlesObtained([ArticlePlainObject])
+}
+
+// MARK: - SpaceflightServiceError
+
+public typealias SpaceflightServiceError = NSError
 
 // MARK: - SpaceflightService
 

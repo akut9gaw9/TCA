@@ -26,8 +26,9 @@ public struct ArticleListView: View {
                     store.scope(
                         state: \.articles,
                         action: ArticleListAction.item
-                    )
-                    , content: ArticleListItemView.init)
+                    ),
+                    content: ArticleListItemView.init
+                )
             }
             .onAppear {
                 viewStore.send(.onAppear)

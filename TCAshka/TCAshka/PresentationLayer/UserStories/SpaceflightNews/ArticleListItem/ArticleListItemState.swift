@@ -11,19 +11,10 @@ import Foundation
 
 public struct ArticleListItemState: Identifiable, Equatable {
     
-    // MARK: - Initiziler
-    
-    public init(article: ArticlePlainObject) {
-        self.id = UUID()
-        self.title = article.title
-        self.imageURL = article.imageURL
-        self.publishedAt = article.publishedAt
-    }
-    
     // MARK: - Properties
     
     /// Unique identifier for the article
-    public let id: UUID
+    public let id: Int
     
     /// The title of the article
     public let title: String
@@ -32,10 +23,18 @@ public struct ArticleListItemState: Identifiable, Equatable {
     public let imageURL: URL
     
     /// The date and time when the article was published
-    public let publishedAt: Date
+    public let publicationDate: Date
     
     /// Average time to read an article
-    public var readingTime: String {
-        TimeInterval(5 * 3600 + 12 * 60 + 59).string()
+    public var readingTime: TimeInterval
+    
+    // MARK: - Initiziler
+    
+    public init(article: ArticlePlainObject) {
+        self.id = article.id
+        self.title = article.title
+        self.imageURL = article.imageURL
+        self.publicationDate = article.publishedAt
+        self.readingTime = article.readingTime
     }
 }

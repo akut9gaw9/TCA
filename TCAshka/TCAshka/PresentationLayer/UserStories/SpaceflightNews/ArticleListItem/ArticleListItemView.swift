@@ -33,9 +33,9 @@ public struct ArticleListItemView: View {
                         .font(.system(size: 15, weight: .bold))
                     Spacer()
                     HStack(spacing: 0) {
-                        Text(viewStore.publishedAt, style: .date)
+                        Text(viewStore.publicationDate, style: .date)
                         Spacer()
-                        Text(viewStore.readingTime)
+                        Text(viewStore.readingTime.string())
                     }
                     .font(.system(size: 10, weight: .light))
                 }

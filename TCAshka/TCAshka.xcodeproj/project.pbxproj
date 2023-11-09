@@ -47,7 +47,6 @@
 		858950F42AF171BC00CCB771 /* CounterBindingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858950F32AF171BC00CCB771 /* CounterBindingAction.swift */; };
 		858950F72AF171CB00CCB771 /* CounterBindingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858950F62AF171CB00CCB771 /* CounterBindingReducer.swift */; };
 		858950FB2AF1721E00CCB771 /* CounterBindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858950FA2AF1721E00CCB771 /* CounterBindingView.swift */; };
-		859D48452AFBD3BF000473A2 /* SpaceflightServiceAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859D48442AFBD3BF000473A2 /* SpaceflightServiceAction.swift */; };
 		859D48482AFBDB78000473A2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 859D48472AFBDB78000473A2 /* Kingfisher */; };
 		859D484D2AFBDEEB000473A2 /* ArticleListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859D484C2AFBDEEB000473A2 /* ArticleListReducer.swift */; };
 		859D484F2AFBDEF8000473A2 /* ArticleListAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859D484E2AFBDEF8000473A2 /* ArticleListAction.swift */; };
@@ -103,7 +102,6 @@
 		858950F32AF171BC00CCB771 /* CounterBindingAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterBindingAction.swift; sourceTree = "<group>"; };
 		858950F62AF171CB00CCB771 /* CounterBindingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterBindingReducer.swift; sourceTree = "<group>"; };
 		858950FA2AF1721E00CCB771 /* CounterBindingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterBindingView.swift; sourceTree = "<group>"; };
-		859D48442AFBD3BF000473A2 /* SpaceflightServiceAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceflightServiceAction.swift; sourceTree = "<group>"; };
 		859D484C2AFBDEEB000473A2 /* ArticleListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListReducer.swift; sourceTree = "<group>"; };
 		859D484E2AFBDEF8000473A2 /* ArticleListAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListAction.swift; sourceTree = "<group>"; };
 		859D48502AFBDF00000473A2 /* ArticleListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListState.swift; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				850F43CD2AFB9B8D001D1E22 /* SpaceflightService.swift */,
-				859D48442AFBD3BF000473A2 /* SpaceflightServiceAction.swift */,
 				850F43CC2AFB9B8D001D1E22 /* SpaceflightServiceImpementation.swift */,
 			);
 			path = SpaceflightService;
@@ -510,7 +507,6 @@
 				850200572AF4258C00D3F91F /* MainView.swift in Sources */,
 				850F43D32AFB9B8D001D1E22 /* WebService.swift in Sources */,
 				85F5B53F2AEAAD4E007779B7 /* FibonacciCounterAction.swift in Sources */,
-				859D48452AFBD3BF000473A2 /* SpaceflightServiceAction.swift in Sources */,
 				857775A72AEC39D4009B8D4E /* DoubleCounterReducer.swift in Sources */,
 				851F4C062AF63E0500490922 /* InteractiveListState.swift in Sources */,
 				85F5B5412AEAAD57007779B7 /* FibonacciCounterState.swift in Sources */,

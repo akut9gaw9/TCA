@@ -11,5 +11,8 @@ import Foundation
 
 public enum ArticleListItemAction: Equatable {
     
+    // MARK: - Cases
+    
+    /// Gives feedback that view is appear
     case onAppear
 }

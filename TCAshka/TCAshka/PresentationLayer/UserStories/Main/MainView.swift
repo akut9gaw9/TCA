@@ -158,6 +158,7 @@ public struct MainView: View {
                     )
                 )
             }
+            .navigationViewStyle(.stack)
         }
     }
 }
