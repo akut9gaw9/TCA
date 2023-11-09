@@ -26,7 +26,7 @@ public struct ArticleListItemState: Identifiable, Equatable {
     public let publicationDate: Date
     
     /// Average time to read an article
-    public var readingTime: TimeInterval
+    public let readingTime: TimeInterval
     
     // MARK: - Initiziler
     

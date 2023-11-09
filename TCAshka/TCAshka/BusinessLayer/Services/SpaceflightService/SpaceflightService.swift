@@ -14,7 +14,11 @@ public enum SpaceflightServiceAction: Equatable {
     
     // MARK: - Cases
     
-    case articlesObtained([ArticlePlainObject])
+    ///
+    case articleListObtained([ArticlePlainObject])
+    
+    ///
+    case articleObtained(ArticlePlainObject)
 }
 
 // MARK: - SpaceflightServiceError

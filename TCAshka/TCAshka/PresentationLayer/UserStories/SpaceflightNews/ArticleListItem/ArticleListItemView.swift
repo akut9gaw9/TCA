@@ -40,6 +40,9 @@ public struct ArticleListItemView: View {
                     .font(.system(size: 10, weight: .light))
                 }
             }
+            .onTapGesture {
+                viewStore.send(.onTap)
+            }
         }
     }
 }

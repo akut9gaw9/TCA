@@ -17,10 +17,9 @@ public struct ArticleListItemReducer: Reducer {
     public var body: some Reducer<ArticleListItemState, ArticleListItemAction> {
         Reduce { state, action in
             switch action {
-            case .onAppear:
-                print("test")
+            case .onTap:
+                return .none
             }
-            return .none
         }
     }
 }

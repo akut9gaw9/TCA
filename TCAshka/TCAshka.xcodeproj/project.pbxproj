@@ -27,6 +27,10 @@
 		850F43F02AFB9D9E001D1E22 /* ArticleListItemAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850F43EF2AFB9D9E001D1E22 /* ArticleListItemAction.swift */; };
 		850F43F22AFB9DA8001D1E22 /* ArticleListItemReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850F43F12AFB9DA8001D1E22 /* ArticleListItemReducer.swift */; };
 		850F43F42AFB9DB0001D1E22 /* ArticleListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850F43F32AFB9DB0001D1E22 /* ArticleListItemView.swift */; };
+		8517A25E2AFD028900994D32 /* ArticlePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517A25D2AFD028900994D32 /* ArticlePageView.swift */; };
+		8517A2602AFD02B000994D32 /* ArticlePageReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517A25F2AFD02B000994D32 /* ArticlePageReducer.swift */; };
+		8517A2622AFD02E500994D32 /* ArticlePageAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517A2612AFD02E500994D32 /* ArticlePageAction.swift */; };
+		8517A2642AFD030300994D32 /* ArticlePageState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517A2632AFD030300994D32 /* ArticlePageState.swift */; };
 		851F4C062AF63E0500490922 /* InteractiveListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F4C052AF63E0500490922 /* InteractiveListState.swift */; };
 		851F4C082AF63E0D00490922 /* InteractiveListAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F4C072AF63E0D00490922 /* InteractiveListAction.swift */; };
 		851F4C0A2AF63E1500490922 /* InteractiveListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F4C092AF63E1500490922 /* InteractiveListReducer.swift */; };
@@ -82,6 +86,10 @@
 		850F43EF2AFB9D9E001D1E22 /* ArticleListItemAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListItemAction.swift; sourceTree = "<group>"; };
 		850F43F12AFB9DA8001D1E22 /* ArticleListItemReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListItemReducer.swift; sourceTree = "<group>"; };
 		850F43F32AFB9DB0001D1E22 /* ArticleListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListItemView.swift; sourceTree = "<group>"; };
+		8517A25D2AFD028900994D32 /* ArticlePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlePageView.swift; sourceTree = "<group>"; };
+		8517A25F2AFD02B000994D32 /* ArticlePageReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlePageReducer.swift; sourceTree = "<group>"; };
+		8517A2612AFD02E500994D32 /* ArticlePageAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlePageAction.swift; sourceTree = "<group>"; };
+		8517A2632AFD030300994D32 /* ArticlePageState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlePageState.swift; sourceTree = "<group>"; };
 		851F4C052AF63E0500490922 /* InteractiveListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveListState.swift; sourceTree = "<group>"; };
 		851F4C072AF63E0D00490922 /* InteractiveListAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveListAction.swift; sourceTree = "<group>"; };
 		851F4C092AF63E1500490922 /* InteractiveListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveListReducer.swift; sourceTree = "<group>"; };
@@ -250,6 +258,7 @@
 				859D484E2AFBDEF8000473A2 /* ArticleListAction.swift */,
 				859D48502AFBDF00000473A2 /* ArticleListState.swift */,
 				850F43EC2AFB9D01001D1E22 /* ArticleListItem */,
+				8517A25C2AFD027A00994D32 /* ArticlePage */,
 			);
 			path = SpaceflightNews;
 			sourceTree = "<group>";
@@ -263,6 +272,17 @@
 				850F43ED2AFB9D92001D1E22 /* ArticleListItemState.swift */,
 			);
 			path = ArticleListItem;
+			sourceTree = "<group>";
+		};
+		8517A25C2AFD027A00994D32 /* ArticlePage */ = {
+			isa = PBXGroup;
+			children = (
+				8517A25D2AFD028900994D32 /* ArticlePageView.swift */,
+				8517A25F2AFD02B000994D32 /* ArticlePageReducer.swift */,
+				8517A2612AFD02E500994D32 /* ArticlePageAction.swift */,
+				8517A2632AFD030300994D32 /* ArticlePageState.swift */,
+			);
+			path = ArticlePage;
 			sourceTree = "<group>";
 		};
 		851F4C032AF63CE700490922 /* InteractiveList */ = {
@@ -502,6 +522,7 @@
 				859D484F2AFBDEF8000473A2 /* ArticleListAction.swift in Sources */,
 				850F43D22AFB9B8D001D1E22 /* SpaceflightService.swift in Sources */,
 				850F43E92AFB9C2F001D1E22 /* TimeInterval.swift in Sources */,
+				8517A2642AFD030300994D32 /* ArticlePageState.swift in Sources */,
 				8577759E2AEC37AA009B8D4E /* CounterState.swift in Sources */,
 				851F4C0E2AF63E3900490922 /* InteractiveListItemState.swift in Sources */,
 				850200572AF4258C00D3F91F /* MainView.swift in Sources */,
@@ -515,8 +536,10 @@
 				850200592AF4259400D3F91F /* MainState.swift in Sources */,
 				859D48532AFBE131000473A2 /* ArticleListView.swift in Sources */,
 				850F43DF2AFB9C0B001D1E22 /* BlogPlainObject.swift in Sources */,
+				8517A2602AFD02B000994D32 /* ArticlePageReducer.swift in Sources */,
 				850F43C82AFB9A68001D1E22 /* AppConstants.swift in Sources */,
 				8502005B2AF4259B00D3F91F /* MainReducer.swift in Sources */,
+				8517A25E2AFD028900994D32 /* ArticlePageView.swift in Sources */,
 				851F4C082AF63E0D00490922 /* InteractiveListAction.swift in Sources */,
 				850F43F02AFB9D9E001D1E22 /* ArticleListItemAction.swift in Sources */,
 				851F4C102AF63E4200490922 /* InteractiveListItemAction.swift in Sources */,
@@ -533,6 +556,7 @@
 				8577759C2AEC37A5009B8D4E /* CounterAction.swift in Sources */,
 				850F43D12AFB9B8D001D1E22 /* SpaceflightServiceImpementation.swift in Sources */,
 				850F43E82AFB9C2F001D1E22 /* String.swift in Sources */,
+				8517A2622AFD02E500994D32 /* ArticlePageAction.swift in Sources */,
 				85F5B5342AEA9F3D007779B7 /* FibonacciCounterReducer.swift in Sources */,
 				8502005D2AF425A800D3F91F /* MainAction.swift in Sources */,
 				851F4C142AF63E4E00490922 /* InteractiveListItemView.swift in Sources */,
