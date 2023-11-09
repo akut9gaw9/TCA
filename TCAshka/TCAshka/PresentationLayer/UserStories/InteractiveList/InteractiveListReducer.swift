@@ -29,12 +29,12 @@ public struct InteractiveListReducer: Reducer {
             case .addRandom:
                 let randomElement = InteractiveListItemState.createItem()
                 state.items.insert(randomElement, at: 0)
-//                state.items.sorted
             case .removeCheckedItems:
                 state.items.removeAll(where: \.isChecked)
             case .delete(let offset):
                 state.items.remove(atOffsets: offset)
             case .item(id: _, action: .checkBoxToggle):
+                print("ya тут")
                 return .send(.removeCheckedItems)
                     .debounce(
                         id: ItemCheckingID(),

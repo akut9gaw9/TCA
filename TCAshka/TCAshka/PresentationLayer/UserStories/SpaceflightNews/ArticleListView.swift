@@ -14,46 +14,54 @@ import HTTPTransport
 public struct ArticleListView: View {
     
     // MARK: - Properties
-        
+    
     public let store: StoreOf<ArticleListReducer>
     
     // MARK: - View
     
     public var body: some View {
         WithViewStore(store) { viewStore in
-            List {
-                ForEachStore(
-                    store.scope(
-                        state: \.articles,
-                        action: ArticleListAction.item
-                    ),
-                    content: ArticleListItemView.init
+            if viewStore.isLoader {
+                ProgressView()
+                    .scaleEffect(2)
+            } else {
+                List {
+                    ForEachStore(
+                        store.scope(
+                            state: \.articles,
+                            action: ArticleListAction.item
+                        ),
+                        content: ArticleListItemView.init
+                    )
+                }
+                .background(
+                    NavigationLink(
+                        isActive: viewStore.binding(
+                            get: \.isArticlePageActive,
+                            send: ArticleListAction.setArticlePageActive
+                        ),
+                        destination: {
+                            IfLetStore(
+                                store.scope(
+                                    state: \.articlePage,
+                                    action: ArticleListAction.articlePage
+                                ),
+                                then: ArticlePageView.init
+                            )
+                        },
+                        label: { EmptyView() }
+                    )
                 )
-            }
-            .background(
-                NavigationLink(
-                    isActive: viewStore.binding(
-                        get: \.isArticlePageActive,
-                        send: ArticleListAction.setArticlePageActive
-                    ),
-                    destination: {
-                        IfLetStore(
-                            store.scope(
-                                state: \.articlePage,
-                                action: ArticleListAction.articlePage
-                            ),
-                            then: ArticlePageView.init
-                        )
-                    },
-                    label: { EmptyView() }
-                )
-            )
-            .onAppear {
-                viewStore.send(.onAppear)
+                .onAppear {
+                    if viewStore.articles.isEmpty {
+                        viewStore.send(.onAppear)
+                    }
+                }
             }
         }
     }
 }
+
 
 // MARK: - Preview
 

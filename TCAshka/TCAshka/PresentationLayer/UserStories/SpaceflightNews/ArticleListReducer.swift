@@ -28,6 +28,7 @@ public struct ArticleListReducer: Reducer {
         Reduce { state, action in
             switch action {
             case .onAppear:
+                state.isLoader = true
                 return spaceflightService.obtainArticles(
                     hasEvent: true,
                     hasLaunch: true
@@ -37,6 +38,7 @@ public struct ArticleListReducer: Reducer {
                 .catchToEffect(ArticleListAction.listArticlesNews)
             case .listArticlesNews(.success(.articleListObtained(let articles))):
                 state.articles = IdentifiedArray(uniqueElements: articles.map(ArticleListItemState.init))
+                state.isLoader = false
             case .item(id: let id, action: .onTap):
                 state.articlePage = ArticlePageState(id: id)
                 return .send(.setArticlePageActive(true))

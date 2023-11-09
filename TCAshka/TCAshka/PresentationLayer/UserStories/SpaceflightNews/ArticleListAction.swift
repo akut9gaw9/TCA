@@ -23,12 +23,12 @@ public enum ArticleListAction: Equatable {
     
     case articlePage(ArticlePageAction)
     
+    // MARK: - Navigation
+    
+    case setArticlePageActive(Bool)
+    
     // MARK: - Services
     
     /// Processing success and failure cases of a request
     case listArticlesNews(Result<SpaceflightServiceAction, SpaceflightServiceError>)
-    
-    // MARK: - Navigation
-    
-    case setArticlePageActive(Bool)
 }
