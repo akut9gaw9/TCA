@@ -18,10 +18,17 @@ public enum ArticleListAction: Equatable {
     
     // MARK: - Children
     
+    /// ?
     case item(id: ArticleListItemState.ID, action: ArticleListItemAction)
+    
+    case articlePage(ArticlePageAction)
     
     // MARK: - Services
     
     /// Processing success and failure cases of a request
     case listArticlesNews(Result<SpaceflightServiceAction, SpaceflightServiceError>)
+    
+    // MARK: - Navigation
+    
+    case setArticlePageActive(Bool)
 }

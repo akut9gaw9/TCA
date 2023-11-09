@@ -14,7 +14,7 @@ import HTTPTransport
 public struct ArticleListView: View {
     
     // MARK: - Properties
-    
+        
     public let store: StoreOf<ArticleListReducer>
     
     // MARK: - View
@@ -30,6 +30,24 @@ public struct ArticleListView: View {
                     content: ArticleListItemView.init
                 )
             }
+            .background(
+                NavigationLink(
+                    isActive: viewStore.binding(
+                        get: \.isArticlePageActive,
+                        send: ArticleListAction.setArticlePageActive
+                    ),
+                    destination: {
+                        IfLetStore(
+                            store.scope(
+                                state: \.articlePage,
+                                action: ArticleListAction.articlePage
+                            ),
+                            then: ArticlePageView.init
+                        )
+                    },
+                    label: { EmptyView() }
+                )
+            )
             .onAppear {
                 viewStore.send(.onAppear)
             }

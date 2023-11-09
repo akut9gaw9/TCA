@@ -16,4 +16,10 @@ public struct ArticleListState: Equatable {
     
     /// Array of type `InteractiveListItemState` in the `IndentifiedArrayOf` wrapper
     public var articles = IdentifiedArrayOf<ArticleListItemState>()
+    
+    public var articlePage: ArticlePageState?
+    
+    // MARK: - Navigation
+    
+    public var isArticlePageActive = false
 }

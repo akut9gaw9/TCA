@@ -33,12 +33,15 @@ public struct ArticleListReducer: Reducer {
                     hasLaunch: true
                 )
                 .publish()
-                .map(SpaceflightServiceAction.articlesObtained)
+                .map(SpaceflightServiceAction.articleListObtained)
                 .catchToEffect(ArticleListAction.listArticlesNews)
-            case .listArticlesNews(.success(.articlesObtained(let articles))):
+            case .listArticlesNews(.success(.articleListObtained(let articles))):
                 state.articles = IdentifiedArray(uniqueElements: articles.map(ArticleListItemState.init))
-            case .item(id: _, action: .onAppear):
-                print("test")
+            case .item(id: let id, action: .onTap):
+                state.articlePage = ArticlePageState(id: id)
+                return .send(.setArticlePageActive(true))
+            case .setArticlePageActive(let isActive):
+                state.isArticlePageActive = isActive
             default:
                 break
             }
@@ -46,6 +49,9 @@ public struct ArticleListReducer: Reducer {
         }
         .forEach(\.articles, action: /ArticleListAction.item) {
             ArticleListItemReducer()
+        }
+        .ifLet(\.articlePage, action: /ArticleListAction.articlePage) {
+            ArticlePageReducer(spaceflightService: spaceflightService)
         }
     }
 }
