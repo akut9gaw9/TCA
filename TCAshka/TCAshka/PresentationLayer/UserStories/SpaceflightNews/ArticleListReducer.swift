@@ -39,21 +39,16 @@ public struct ArticleListReducer: Reducer {
                 state.articles = IdentifiedArray(uniqueElements: articles.map(ArticleListItemState.init))
                 state.isLoaderActive = false
             case .item(id: let id, action: .onTap):
-                state.selectedArticleID = id
                 return spaceflightService.obtainArticle(id: id)
                     .publish()
                     .map(SpaceflightServiceAction.articleObtained)
                     .catchToEffect(ArticleListAction.listArticlesNews)
             case .listArticlesNews(.success(.articleObtained(let article))):
+                state.articles[id: article.id]?.isLoader = false
                 state.articlePage = ArticlePageState(article: article)
                 return .send(.setArticlePageActive(true))
             case .setArticlePageActive(let isActive):
                 state.isArticlePageActive = isActive
-                guard let index = state.articles.elements.firstIndex(where: {$0.id == state.selectedArticleID}) else {
-                    return .none
-                }
-                state.articles[index].isLoader = false
-                state.selectedArticleID = nil
             case .setLoaderActive(let isActive):
                 state.isLoaderActive = isActive
             default:

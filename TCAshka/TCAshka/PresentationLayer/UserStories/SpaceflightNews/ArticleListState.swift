@@ -17,9 +17,6 @@ public struct ArticleListState: Equatable {
     /// Loader disable
     public var isLoaderActive = false
     
-    /// Selected article with its ID
-    public var selectedArticleID: Int?
-    
     // MARK: - Children
     
     /// Array of type `InteractiveListItemState` in the `IndentifiedArrayOf` wrapper
