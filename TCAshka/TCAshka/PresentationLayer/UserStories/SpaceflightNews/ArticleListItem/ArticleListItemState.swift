@@ -28,6 +28,9 @@ public struct ArticleListItemState: Identifiable, Equatable {
     /// Average time to read an article
     public let readingTime: TimeInterval
     
+    /// Describes the loader state
+    public var isLoader = false
+    
     // MARK: - Initiziler
     
     public init(article: ArticlePlainObject) {

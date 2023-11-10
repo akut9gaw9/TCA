@@ -18,14 +18,19 @@ public enum ArticleListAction: Equatable {
     
     // MARK: - Children
     
-    /// ?
+    /// Handling actions from ArticelListItemState
     case item(id: ArticleListItemState.ID, action: ArticleListItemAction)
     
+    /// Instance `ArticlePageAction`
     case articlePage(ArticlePageAction)
     
     // MARK: - Navigation
     
+    /// Sets true or false to screen view status
     case setArticlePageActive(Bool)
+    
+    /// Sets true or false to loader status
+    case setLoaderActive(Bool)
     
     // MARK: - Services
     

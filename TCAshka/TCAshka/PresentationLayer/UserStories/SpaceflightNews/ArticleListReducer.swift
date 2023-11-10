@@ -28,7 +28,6 @@ public struct ArticleListReducer: Reducer {
         Reduce { state, action in
             switch action {
             case .onAppear:
-                state.isLoader = true
                 return spaceflightService.obtainArticles(
                     hasEvent: true,
                     hasLaunch: true
@@ -38,12 +37,25 @@ public struct ArticleListReducer: Reducer {
                 .catchToEffect(ArticleListAction.listArticlesNews)
             case .listArticlesNews(.success(.articleListObtained(let articles))):
                 state.articles = IdentifiedArray(uniqueElements: articles.map(ArticleListItemState.init))
-                state.isLoader = false
+                state.isLoaderActive = false
             case .item(id: let id, action: .onTap):
-                state.articlePage = ArticlePageState(id: id)
+                state.selectedArticleID = id
+                return spaceflightService.obtainArticle(id: id)
+                    .publish()
+                    .map(SpaceflightServiceAction.articleObtained)
+                    .catchToEffect(ArticleListAction.listArticlesNews)
+            case .listArticlesNews(.success(.articleObtained(let article))):
+                state.articlePage = ArticlePageState(article: article)
                 return .send(.setArticlePageActive(true))
             case .setArticlePageActive(let isActive):
                 state.isArticlePageActive = isActive
+                guard let index = state.articles.elements.firstIndex(where: {$0.id == state.selectedArticleID}) else {
+                    return .none
+                }
+                state.articles[index].isLoader = false
+                state.selectedArticleID = nil
+            case .setLoaderActive(let isActive):
+                state.isLoaderActive = isActive
             default:
                 break
             }

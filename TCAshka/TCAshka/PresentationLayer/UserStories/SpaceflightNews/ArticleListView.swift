@@ -21,7 +21,7 @@ public struct ArticleListView: View {
     
     public var body: some View {
         WithViewStore(store) { viewStore in
-            if viewStore.isLoader {
+            if viewStore.isLoaderActive {
                 ProgressView()
                     .scaleEffect(2)
             } else {
@@ -54,6 +54,7 @@ public struct ArticleListView: View {
                 )
                 .onAppear {
                     if viewStore.articles.isEmpty {
+                        viewStore.send(.setLoaderActive(true))
                         viewStore.send(.onAppear)
                     }
                 }

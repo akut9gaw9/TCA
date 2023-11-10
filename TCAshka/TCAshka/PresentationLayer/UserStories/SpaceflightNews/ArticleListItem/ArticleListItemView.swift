@@ -21,27 +21,32 @@ public struct ArticleListItemView: View {
     
     public var body: some View {
         WithViewStore(store) { viewStore in
-            HStack(spacing: 0) {
-                KFImage(viewStore.imageURL)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(size: LayoutConstants.imageSize)
-                    .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
-                Spacer()
-                VStack(spacing: 0) {
-                    Text(viewStore.title)
-                        .font(.system(size: 15, weight: .bold))
+            if viewStore.isLoader {
+                ProgressView()
+                    .scaleEffect(2)
+            } else {
+                HStack(spacing: 0) {
+                    KFImage(viewStore.imageURL)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(size: LayoutConstants.imageSize)
+                        .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
                     Spacer()
-                    HStack(spacing: 0) {
-                        Text(viewStore.publicationDate, style: .date)
+                    VStack(spacing: 0) {
+                        Text(viewStore.title)
+                            .font(.system(size: 15, weight: .bold))
                         Spacer()
-                        Text(viewStore.readingTime.string())
+                        HStack(spacing: 0) {
+                            Text(viewStore.publicationDate, style: .date)
+                            Spacer()
+                            Text(viewStore.readingTime.string())
+                        }
+                        .font(.system(size: 10, weight: .light))
                     }
-                    .font(.system(size: 10, weight: .light))
                 }
-            }
-            .onTapGesture {
-                viewStore.send(.onTap)
+                .onTapGesture {
+                    viewStore.send(.onTap)
+                }
             }
         }
     }

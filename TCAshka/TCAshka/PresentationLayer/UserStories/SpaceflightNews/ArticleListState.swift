@@ -15,7 +15,10 @@ public struct ArticleListState: Equatable {
     // MARK: - Properties
     
     /// Loader disable
-    public var isLoader = false
+    public var isLoaderActive = false
+    
+    /// Selected article with its ID
+    public var selectedArticleID: Int?
     
     // MARK: - Children
     

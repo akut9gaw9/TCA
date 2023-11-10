@@ -36,6 +36,8 @@ public struct ArticlePageState: Equatable {
     
     // MARK: - Initialization
     
+    /// Initializes `ArticlePageState` with a single parameter `id`
+    /// - Parameter id: ID of the article we need
     public init(id: Int) {
         self.id = id
         self.title = ""
@@ -46,6 +48,8 @@ public struct ArticlePageState: Equatable {
         self.author = ""
     }
     
+    /// Initializes with initial data
+    /// - Parameter article: article data type `ArticlePlainObject`
     public init(article: ArticlePlainObject) {
         self.id = article.id
         self.title = article.title

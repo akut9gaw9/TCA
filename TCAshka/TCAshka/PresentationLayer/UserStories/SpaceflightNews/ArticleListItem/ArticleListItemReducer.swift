@@ -18,6 +18,7 @@ public struct ArticleListItemReducer: Reducer {
         Reduce { state, action in
             switch action {
             case .onTap:
+                state.isLoader = true
                 return .none
             }
         }
