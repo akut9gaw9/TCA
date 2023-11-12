@@ -28,6 +28,7 @@ public struct ArticlePageReducer: Reducer {
         Reduce { state, action in
             switch action {
             case .onAppear:
+                state.isLoader = true
                 return spaceflightService
                     .obtainArticle(id: state.id)
                     .publish()
@@ -41,6 +42,7 @@ public struct ArticlePageReducer: Reducer {
                 state.publicationDate = article.publishedAt
                 state.readingTime = article.readingTime
                 state.summary = article.content
+                state.isLoader = false
             default:
                 break
             }

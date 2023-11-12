@@ -34,6 +34,9 @@ public struct ArticlePageState: Equatable {
     /// Author of the article
     public var author: String
     
+    /// Describes the loader state
+    public var isLoader = false
+    
     // MARK: - Initialization
     
     /// Initializes `ArticlePageState` with a single parameter `id`

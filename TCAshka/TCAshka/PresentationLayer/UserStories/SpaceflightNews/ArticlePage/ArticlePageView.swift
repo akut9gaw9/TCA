@@ -22,30 +22,35 @@ public struct ArticlePageView: View {
     
     public var body: some View {
         WithViewStore(store) { viewStore in
-            ScrollView {
-                KFImage(viewStore.imageURL)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                    .padding(10)
-                Text(viewStore.title)
-                    .font(.system(size: 20, weight: .bold))
-                    .padding(10)
-                HStack {
-                    Image(systemName: "person")
-                    Text(viewStore.author)
-                        .font(.system(size: 15, weight: .thin))
-                    Spacer()
-                    Text(viewStore.publicationDate, style: .date)
-                        .font(.system(size: 15, weight: .thin))
-                }
-                .padding(12)
-                Text(viewStore.summary)
-                    .font(.system(size: 15, weight: .thin))
+            if viewStore.isLoader {
+                ProgressView()
+                    .scaleEffect(2)
+                    .onAppear {
+                        viewStore.send(.onAppear)
+                    }
+            } else {
+                ScrollView {
+                    KFImage(viewStore.imageURL)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .clipShape(RoundedRectangle(cornerRadius: 25.0))
+                        .padding(10)
+                    Text(viewStore.title)
+                        .font(.system(size: 20, weight: .bold))
+                        .padding(10)
+                    HStack {
+                        Image(systemName: "person")
+                        Text(viewStore.author)
+                            .font(.system(size: 15, weight: .thin))
+                        Spacer()
+                        Text(viewStore.publicationDate, style: .date)
+                            .font(.system(size: 15, weight: .thin))
+                    }
                     .padding(12)
-            }
-            .onAppear {
-                viewStore.send(.onAppear)
+                    Text(viewStore.summary)
+                        .font(.system(size: 15, weight: .thin))
+                        .padding(12)
+                }
             }
         }
     }

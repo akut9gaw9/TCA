@@ -39,10 +39,19 @@ public struct ArticleListReducer: Reducer {
                 state.articles = IdentifiedArray(uniqueElements: articles.map(ArticleListItemState.init))
                 state.isLoaderActive = false
             case .item(id: let id, action: .onTap):
-                return spaceflightService.obtainArticle(id: id)
-                    .publish()
-                    .map(SpaceflightServiceAction.articleObtained)
-                    .catchToEffect(ArticleListAction.listArticlesNews)
+                var transition = state.transition
+                switch transition {
+                case .instant:
+                    state.articles[id: id]?.isLoader = false
+                    state.articlePage = ArticlePageState(id: id)
+                    state.articlePage?.isLoader = true
+                    return .send(.setArticlePageActive(true))
+                case .expectation:
+                    return spaceflightService.obtainArticle(id: id)
+                        .publish()
+                        .map(SpaceflightServiceAction.articleObtained)
+                        .catchToEffect(ArticleListAction.listArticlesNews)
+                }
             case .listArticlesNews(.success(.articleObtained(let article))):
                 state.articles[id: article.id]?.isLoader = false
                 state.articlePage = ArticlePageState(article: article)

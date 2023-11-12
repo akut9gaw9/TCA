@@ -20,7 +20,7 @@ public struct ArticleListItemState: Identifiable, Equatable {
     public let title: String
     
     /// The URL of the image associated with the article
-    public let imageURL: URL
+    public let imageURL: URL?
     
     /// The date and time when the article was published
     public let publicationDate: Date
@@ -33,6 +33,8 @@ public struct ArticleListItemState: Identifiable, Equatable {
     
     // MARK: - Initiziler
     
+    /// Initialization using a parameter of type `ArticlePlainObject`
+    /// - Parameter article: parameter `ArticlePlainObject` type
     public init(article: ArticlePlainObject) {
         self.id = article.id
         self.title = article.title
